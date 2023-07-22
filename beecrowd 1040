@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+    double a,b,c,d;
+    scanf("%lf%lf%lf%lf",&a,&b,&c,&d);
+    double sumT = a * 2 + b *3 + c * 4 + d * 1;
+    double Ttl = 10;
+    double Avg = sumT / Ttl;
+    printf("Media: %.1lf\n",Avg);
+
+
+
+
+ if(Avg >= 7.0){
+        printf("Aluno aprovado.\n");
+    }
+    if(Avg < 5.0){
+        printf("Aluno reprovado.\n");
+    }
+    if(Avg >= 5.0 && Avg <= 6.9){
+        printf("Aluno em exame.\n");
+
+        double e;
+        scanf("%lf",&e);
+        printf("Nota do exame: %.1lf\n",e);
+        double avgSum = (Avg + e)/2;
+
+        if( avgSum >= 5.0){
+            printf("Aluno aprovado.\n");
+        }
+        else{
+            printf("Aluno reprovado.\n");
+        }
+        printf("Media final: %.1lf\n",avgSum);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return 0;
+}

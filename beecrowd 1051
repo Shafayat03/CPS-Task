@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    double sal,tsal,fsal;
+    scanf("%lf",&sal);
+    if(sal >= 0 && sal <= 2000){
+           printf("Isento\n");
+    }
+    else if(sal>2000 && sal <= 3000){
+        tsal = sal - 2000;
+        fsal = tsal * 0.08;
+        printf("R$ %.2lf\n",fsal);
+
+    }
+    else if(sal > 3000 && sal <= 4500){
+          tsal = sal - 3000;
+        fsal = (tsal * 0.18) + 1000 * 0.08;
+         printf("R$ %.2lf\n",fsal);
+
+    }
+    else if(sal > 4500 ){
+         tsal = sal - 4500;
+        fsal = (tsal * 0.28) + 1500 * 0.18 + 1000 * 0.08;
+         printf("R$ %.2lf\n",fsal);
+
+    }
+
+  return 0;
+}

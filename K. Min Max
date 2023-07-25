@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c,low,high;
+    scanf("%d%d%d",&a,&b,&c);
+
+    if(a <= b && a <= c){
+        low = a;
+    }
+    else if(  b <= a && b <= c){
+        low = b;
+    }
+    else{
+        low = c;
+    }
+
+    if( a >= b && a >= c){
+        high = a;
+    }
+    else if( b >= a && b >= c){
+        high = b;
+    }
+    else{
+        high = c;
+    }
+
+    printf("%d %d\n",low,high);
+
+  return 0;
+}

@@ -1,0 +1,22 @@
+/// Aproach one 
+#include<stdio.h>
+int main()
+{
+    char c;
+    scanf("%d",&c);
+
+    int ascii = c;
+
+    if( ascii >= 97 && ascii <= 122){
+        printf("ALPHA\nIS CAPITAL\n");
+    }
+    else if( ascii >= 65 && ascii <= 90){
+        printf("ALPHA\nIS SMALL\n");
+    }
+    else{
+        printf("IS DIGIT\n");
+    }
+
+  return 0;
+}
+

@@ -3,7 +3,7 @@
 int main()
 {
     char c;
-    scanf("%d",&c);
+    scanf("%c",&c);
 
     int ascii = c;
 

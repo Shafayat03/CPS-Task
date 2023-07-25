@@ -8,10 +8,10 @@ int main()
     int ascii = c;
 
     if( ascii >= 97 && ascii <= 122){
-        printf("ALPHA\nIS CAPITAL\n");
+        printf("ALPHA\nIS SMALL\n");
     }
     else if( ascii >= 65 && ascii <= 90){
-        printf("ALPHA\nIS SMALL\n");
+        printf("ALPHA\nIS CAPITAL\n");
     }
     else{
         printf("IS DIGIT\n");
@@ -19,4 +19,5 @@ int main()
 
   return 0;
 }
+
 

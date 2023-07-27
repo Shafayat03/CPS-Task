@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    while(t--){
+        int a,b,c;
+        scanf("%d%d%d",&a,&b,&c);
+        int add = b + c;
+        if(add - 1 >= a-1){
+            printf("%d\n",a+(a-1));
+        }
+        else{
+            printf("%d\n",(add+1)+add);
+        }
+    }
+
+  return 0;
+}
+

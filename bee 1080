@@ -1,0 +1,22 @@
+#include <stdio.h>
+ 
+int main() {
+   int initial,num,cur_v,max_v,position;
+    num = 100;
+    initial = 1;
+    max_v = -1;
+    position = -1;
+    while(initial <= num){
+        scanf("%d",&cur_v);
+        if(cur_v > max_v){
+            max_v = cur_v;
+            position = initial;
+        }
+        initial++;
+    }
+printf("%d\n",max_v);
+printf("%d\n",position);
+
+ 
+    return 0;
+}

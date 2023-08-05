@@ -1,0 +1,132 @@
+Certainly! Here are some loop-related problem types along with solutions using C programming:
+
+Summation Problem:
+Problem: Calculate the sum of all even numbers between 1 and N.
+
+c
+Copy code
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    int sum = 0;
+    for (int i = 2; i <= n; i += 2) {
+        sum += i;
+    }
+
+    printf("Sum of even numbers between 1 and %d: %d\n", n, sum);
+    return 0;
+}
+Factorial Problem:
+Problem: Calculate the factorial of a given number.
+
+c
+Copy code
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    int factorial = 1;
+    for (int i = 1; i <= n; i++) {
+        factorial *= i;
+    }
+
+    printf("Factorial of %d: %d\n", n, factorial);
+    return 0;
+}
+Pattern Printing Problem:
+Problem: Print a pattern of numbers in a pyramid.
+
+c
+Copy code
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the number of rows: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++) {
+            printf(" ");
+        }
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            printf("%d", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+Prime Number Checking Problem:
+Problem: Check if a given number is prime.
+
+c
+Copy code
+#include <stdio.h>
+#include <stdbool.h>
+
+bool isPrime(int n) {
+    if (n <= 1) {
+        return false;
+    }
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (isPrime(n)) {
+        printf("%d is a prime number.\n", n);
+    } else {
+        printf("%d is not a prime number.\n", n);
+    }
+
+    return 0;
+}
+Palindrome Checking Problem:
+Problem: Check if a given string is a palindrome.
+
+c
+Copy code
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+bool isPalindrome(char str[]) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    if (isPalindrome(str)) {
+        printf("%s is a palindrome.\n", str);
+    } else {
+        printf("%s is not a palindrome.\n", str);
+    }
+
+    return 0;
+}
+These are just a few examples of loop-related problem types and their solutions using C programming. These problems cover a range of concepts and can help you practice and improve your coding skills.

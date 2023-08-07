@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+  int t;
+  scanf("%d",&t);
+        int even = 0;
+        int odd = 0;
+        int positive = 0;
+        int negative = 0;
+        int num;
+while(t--){
+            scanf("%d",&num);
+        if(num %2 == 0){
+            even++;
+        }
+   else{
+            odd++;
+        }
+        if(num > 0){
+            positive++;
+        }
+     else if ( num < 0) {
+            negative++;
+        }
+
+
+    }
+    printf("Even: %d\n",even);
+    printf("Odd: %d\n",odd);
+    printf("Positive: %d\n",positive);
+    printf("Negative: %d\n",negative);
+
+  return 0;
+}
+

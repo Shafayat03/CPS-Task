@@ -3,8 +3,7 @@ Certainly! Here are some loop-related problem types along with solutions using C
 Summation Problem:
 Problem: Calculate the sum of all even numbers between 1 and N.
 
-c
-Copy code
+/**__ >>
 #include <stdio.h>
 
 int main() {
@@ -23,8 +22,8 @@ int main() {
 Factorial Problem:
 Problem: Calculate the factorial of a given number.
 
-c
-Copy code
+/**__ >>
+
 #include <stdio.h>
 
 int main() {
@@ -43,8 +42,8 @@ int main() {
 Pattern Printing Problem:
 Problem: Print a pattern of numbers in a pyramid.
 
-c
-Copy code
+/**__ >>
+
 #include <stdio.h>
 
 int main() {
@@ -67,8 +66,9 @@ int main() {
 Prime Number Checking Problem:
 Problem: Check if a given number is prime.
 
-c
-Copy code
+
+/**__ >>
+
 #include <stdio.h>
 #include <stdbool.h>
 

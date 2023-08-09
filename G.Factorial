@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    long long int N;
+   
+    int num;
+    scanf("%d", &num);
+ 
+    for (int j = 1; j <= num; j++)
+    {
+        scanf("%lld", &N);
+         long long int count = 1;
+ 
+        for (int i = 1; i <= N; i++)
+        {
+            count = count * i;
+        }
+        printf("%lld\n", count);
+    }
+ 
+    return 0;
+}

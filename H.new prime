@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+    int x;
+    scanf("%d",&x);
+    int flag_prime = 1;
+ 
+    if(x == 1) flag_prime = 0;
+    // 1 er jonno prime number e r case alada vabe handle korte hoi
+/// always remember
+ 
+ 
+    for(int i = 2; i < x; i++){
+        if(x % i == 0){
+            flag_prime = 0;
+            break;
+        }
+    }
+ 
+    if(flag_prime == 1){
+        printf("YES");
+    }
+    else{
+        printf("NO");
+    }
+ 
+  return 0;
+}

@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    long long num1, num2,a,b,temp;
+    scanf("%lld %lld",&num1,&num2);
+    a = num1;
+    b = num2;
+
+    while(b != 0){
+        temp = a % b;
+        a = b ;
+        b = temp;
+    }
+   long long GCD = a;
+   long long LCM = (num1 * num2 )/ GCD;
+    printf("%lld %lld\n",GCD,LCM);
+
+
+  return 0;
+}
+

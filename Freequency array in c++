@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    int t = 1;
+while(t--)
+{
+    int n; cin>> n;
+    int freq[20];
+    for(int i = 1; i <= 20; i++)freq[i] = 0;
+    for(int i = 1; i <= n; i++)
+    {
+
+        int x; cin >> x;
+        freq[x]++;
+    }
+    for(int i = 1; i <= 20; i++)
+    {
+        cout <<i <<" " << freq[i] << endl;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+return 0;
+
+}

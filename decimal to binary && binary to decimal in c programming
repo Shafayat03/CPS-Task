@@ -1,0 +1,46 @@
+
+///--->  Decimal to binary conversion
+#include<stdio.h>
+int main()
+{
+    int num,bin = 0, rem = 0, place = 1;
+
+    scanf("%d",&num);
+
+
+    while(num)
+    {
+        rem =  num % 2;
+        num = num / 2;
+        bin = bin + (rem * place);
+        place = place * 10;
+
+
+    }
+    printf("%d\n",bin);
+
+
+  return 0;
+}
+
+/// Binary to decimal
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    long long num;
+    int dec = 0, rem = 0, place = 0;
+    scanf("%lld",&num);
+
+    while(num){
+        rem = num % 10;
+
+            dec = dec + rem * (pow(2,place));
+        num = num / 10;
+        place++;
+    }
+    printf("%d\n",dec);
+
+  return 0;
+}

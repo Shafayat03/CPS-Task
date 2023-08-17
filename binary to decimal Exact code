@@ -1,0 +1,22 @@
+///binary to decimal Exact code 
+#include<stdio.h>
+int main()
+{
+    int binary;
+    int decimal , temp, i;
+    scanf("%d",&binary);
+
+    decimal = 0;
+    i = 1;
+
+    while( binary > 0){
+
+        temp = binary % 10;
+        decimal += temp * i;
+        i = i * 2;
+        binary /=  10;
+    }
+    printf("%d\n",decimal);
+
+return 0;
+}

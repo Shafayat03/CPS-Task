@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include<math.h>
+int main() {
+  int decimal, i, temp;
+  int binary;
+
+
+  scanf("%d", &decimal);
+
+  i = 0;
+  binary = 0;
+  while (decimal > 0) {
+    temp = decimal % 2;
+    binary += temp * pow(10, i);
+    decimal /= 2;
+    i++;
+  }
+
+  printf("%d\n", binary);
+
+  return 0;
+}

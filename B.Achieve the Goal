@@ -1,27 +1,32 @@
 #include<stdio.h>
 int main()
 {
-    int n, k, a;
-    scanf("%d %d %d",&n,&k,&a);
+    
+    int n,k,a;
+    scanf("%d%d%d",&n,&k,&a);
+    
     int sumOfNumbers = 0;
-
+    
     for(int i = 1; i < n; i++){
         int number;
         scanf("%d",&number);
-
-        sumOfNumbers += number;
+        sumOfNumbers +=  number;
     }
-
+    
+    int x = ( n * a) - sumOfNumbers;
+    
     if(x < 0) x = 0;
     
-    int x = (n * a ) - sumOfNumbers;
-    if(x >= 0 && x <= k) printf("%d\n",x);
+    if ( x <= k) printf("%d\n",x);
     else printf("-1\n");
+    
+    
 
+  
 
-
-
-  return 0;
 }
+
+
+
 
 

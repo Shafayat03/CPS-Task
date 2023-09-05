@@ -29,3 +29,48 @@ int main()
 
         printf("%d\n", freq[val]);
     }
+
+
+
+
+
+/// array swap  using two array easy processs
+
+
+#include<stdio.h>
+
+const int mx = 100123;
+int a[mx], b[mx];
+
+
+
+int main()
+{
+
+
+    int n;
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++) scanf("%d", &a[i]);
+
+    for(int i = 1, j = n; i <= n; i++ ,j--){
+         b[j] = a[i];
+    }
+
+    for(int i = 1; i <= n; i++){
+        printf("%d ", b[i]);
+    }
+
+    printf("\n");
+
+
+  return 0;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+/// T. Matrix newcomersheet
+
+#include<stdio.h>
+const int mx = 123;
+int a[mx][mx];
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for(int i = 0; i < n ; i++){
+        for(int j = 0; j < n; j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    int primaryDiagonal = 0;
+    int SecondaryDiagonal = 0;
+
+    for(int i = 0; i < n; i++){
+        primaryDiagonal += a[i][i];
+    }
+    for(int i = 0, j = n - 1; i < n; i++, j--){
+        SecondaryDiagonal += a[i][j];
+    }
+
+    int difference = primaryDiagonal - SecondaryDiagonal;
+    if(difference < 0) difference *= -1;
+
+    printf("%d",difference);
+
+  return 0;
+}

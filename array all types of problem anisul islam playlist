@@ -1,0 +1,75 @@
+/// arrray sum & average
+/*
+
+#include<stdio.h>
+int main()
+{
+    int a[100123],sum = 0, i,n;
+for(int i = 0; i < n; i++){
+    scanf("%d",&a[i]);
+}
+    for(int i = 0;  i < n; i++){
+         sum += a[i];
+    }
+    printf("%d\n",sum);
+    printf("average: %.2lf\n",(float)sum/10);
+  return 0;
+}
+
+*/
+/// maximum  value print in array
+
+/*
+#include<stdio.h>
+int main()
+{
+    int num[100123],n;
+    scanf("%d",&n);
+
+    for(int i = 0; i < n; i++){
+        scanf("%d",&num[i]);
+    }
+
+    int mx = num[0];
+
+    for(int i = 1; i < n; i++){
+        if( mx < num[i])
+            mx = num[i];
+
+    }
+    printf(" Max : %d\n", mx);
+
+
+
+  return 0;
+}
+*/
+
+
+
+/// Minimum value print in array
+
+
+#include<stdio.h>
+int main()
+{
+    int num[100123],n;
+    scanf("%d",&n);
+
+    for(int i = 0; i < n; i++){
+        scanf("%d",&num[i]);
+    }
+
+    int mn = num[0];
+
+    for(int i = 1; i < n; i++){
+        if( mn > num[i])
+            mn = num[i];
+
+    }
+    printf(" min : %d\n", mn);
+
+
+
+  return 0;
+}

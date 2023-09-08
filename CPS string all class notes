@@ -145,7 +145,7 @@ int main()
 // E.count
 // print sum of digits string
 #include<stdio.h>
-const int mx = 100123;
+const int mx = 1e6+123;
 char s[mx];
 
 

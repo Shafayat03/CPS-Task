@@ -119,5 +119,26 @@ int main()
   return 0;
 }
 
+/// char to digit  &&  digit to char
+#include<stdio.h>
+int main()
+{
+    // char to digit conversion
+
+    char c = '4';
+    int digit = c - '0';
+
+    printf("%d\n",digit);
+
+    /// int to char ;
+  /*
+      int d = 2;
+      char c = d + 'c';
+      printf("%c", c);  //  2 
+  
+  */
+
+  return 0;
+}
 
 

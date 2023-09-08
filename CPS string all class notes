@@ -1,1 +1,58 @@
 /// All string problems
+
+
+
+/// string inpuut and output
+#include<stdio.h>
+int main()
+{
+    char s[123];
+
+    for(int i = 0; i < 3; i++){
+        scanf("%c",&s[i]);
+    }
+
+    for(int i = 0; i < 3; i++){
+        printf("%c",s[i]);
+    }
+
+
+  return 0;
+}
+
+
+/// string inpuut and output  with n 
+#include<stdio.h>
+int main()
+{
+    char s[123];
+     int n;
+     scanf("%d",&n);
+    for(int i = 0; i < n; i++){
+        scanf(" %c",&s[i]);
+        /// akta space dite hobe input newar somoy na hoi vul output dibe 
+    }
+
+    for(int i = 0; i < n; i++){
+        printf("%c",s[i]);
+    }
+
+
+  return 0;
+}
+
+
+/// string inpuut and output  without size---> (Static)
+//size bolte na hole dynamic---> vector(dynamic)
+///string ---> sequencial array
+#include<stdio.h>
+
+int main()
+{
+    char s[123];
+    scanf("%s", s); // eta akta pointer ---> array without index is a  pointer
+    printf("%s",s);
+
+  return 0;
+}
+

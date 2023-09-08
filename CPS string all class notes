@@ -56,3 +56,23 @@ int main()
   return 0;
 }
 
+
+/// pointer e kicu na thakle output---> Null 
+
+#include<stdio.h>
+
+int main()
+{
+    char s[123];
+   // scanf("%s", s); // eta akta pointer ---> array without index is a  pointer
+    int a = (s[3] == '\0');
+    /// string e kicu nai bujate null output dei '\0'
+
+    printf("%s",a);
+
+  return 0;
+}
+
+
+
+

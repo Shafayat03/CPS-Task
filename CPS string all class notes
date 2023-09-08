@@ -74,5 +74,26 @@ int main()
 }
 
 
+/// string er length output
+
+
+#include<stdio.h>
+
+int main()
+{
+    char s[123];
+    scanf("%s", s); // eta akta pointer ---> array without index is a  pointer
+    int i = 0;
+    while(s[i] != '\0'){
+       printf("%d : %c\n",i,s[i]);
+        i++;
+    };
+    /// string e kicu nai bujate null output dei '\0'
+
+    printf("%d",i);
+
+  return 0;
+}
+
 
 

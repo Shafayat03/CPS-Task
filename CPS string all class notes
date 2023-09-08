@@ -95,5 +95,29 @@ int main()
   return 0;
 }
 
+/// string er length increament kora
+
+#include<stdio.h>
+int main()
+{
+    char s[123];
+    scanf("%s", s); // eta akta pointer ---> array without index is a  pointer
+    int len = 0;
+    while(s[len] != '\0'){
+       printf("%d : %c\n",len,s[len]);
+        len++;
+    };
+    /// string e kicu nai bujate null output dei '\0'
+
+  // length er value 1 kore baranor jonno use
+  for(int i = 0; i < len; i++){
+    s[i]++;
+  }
+
+    printf("%s",s);
+
+  return 0;
+}
+
 
 

@@ -75,3 +75,58 @@ int main()
 
     return 0;
 }
+
+
+
+
+/// How to print palindrome array
+
+
+#include<bits/stdc++.h>
+using namespace std;
+  
+// sequence :  1 2 2 1 -- > mil takbe akta r ek tar shate (1,4) && (2,3);
+
+/*
+   1,  2, 2, 1
+   .         .
+   .         .
+/// i == (n - i - 1)
+
+
+ei condition fill up korle oi array tah akta palindrome array
+
+
+*/
+
+
+int main()
+{
+   //G. palindrome array
+
+   int n;
+   long long int sum = 0;
+
+   cin >> n;
+   int arr[n];
+   for(int i = 0; i < n; i++){
+     cin >> arr[i];
+   }
+   int i = 0, j = n - 1,flag = 1;
+   for(i = 0; i <= j; i++,j--)
+   {
+       if(arr[i] != arr[j]){
+         cout << "NO\n";
+         flag = 0;
+         break;
+       }
+   }
+   if(flag == 1){
+      cout << "YES\n";
+    
+   }
+
+
+
+    return 0;
+}

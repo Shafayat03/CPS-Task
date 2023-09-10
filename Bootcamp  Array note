@@ -132,3 +132,29 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+/// Bubble Sort Algorithms
+/// Array Sortings --> Ascending && Decending order
+/// Bubble Algorithms
+
+BASICS***
+/*
+ 
+ 
+ 
+    Dui tah dui tah value check korbo
+    
+    left er value right er value er theke choto hole kicuy korbo nah move on korbo
+     
+    left er value right er value er theke Boro hole  Swap kore dibo  
+
+
+    E rokom cholte thakbe joto k kn na ascending order e thake sob value 
+    
+
+*/
+/// CODE 

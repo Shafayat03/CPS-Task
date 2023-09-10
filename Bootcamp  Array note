@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//Gloabally ---> 10 ^ 7
+// data segment e store hoi tai size boor
+
+
+int main()
+{
+
+    //array--> contigious memory block
+
+
+    // array--> local size   10 ^ 6
+  //  stag memory size kom ---> memory kom tai
+
+    /// sum of a array print
+
+    int n;
+    long long int sum = 0;
+    cin>>n;
+    int arr[n];
+    for(int i = 0; i<n; i++){
+        cin>>arr[i];
+        sum += arr[i];
+    }
+    cout << sum << "\n";
+    return 0;
+}

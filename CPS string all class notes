@@ -212,3 +212,39 @@ int main()
   return 0;
 }
 
+
+/// String reverse  algo
+
+
+
+#include<stdio.h>
+int main()
+{
+    // input string
+    char s[123];
+    scanf("%s",s);
+
+ //   declare length
+    int len = 0;
+
+    while(s[len] != 0 ){
+        len++;
+    }
+
+   // slide print korar jonno j i r j use  kori oi rokom pointer nici
+
+
+    for(int i = 0, j  = len-1; i < j; i++,j--){
+    ///  swaping the string
+        char tmp = s[i];
+        s[i] = s[j];
+        s[j] = tmp;
+    }
+
+    printf("%s\n",s);
+
+
+  return 0;
+}
+
+

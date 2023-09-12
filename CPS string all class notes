@@ -344,3 +344,56 @@ int main()
   return 0;
 }
 
+
+/// pattern check in string
+
+
+// H. Good or Bad
+
+#include<stdio.h>
+
+const int mx = 1e5 + 123;
+char s[mx];
+
+int main()
+{
+    int t;
+    scanf("%d",&t);
+
+    while(t--){
+        scanf("%s",s);
+
+      int len = 0;
+      while(s[len] != 0){
+
+           len++;
+
+      }
+      bool isGood = false;
+
+      for(int i = 2; i < len; i++){
+
+         char s1 = s[i-2]; //s1 = s[0]
+         char s2 = s[i-1]; // s[2] = s[1]
+         char s3 = s[i]; // s3 = s[2]
+
+        if( s1 == '0' && s2 == '1' && s3 == '0'){ //010
+            isGood = true;
+            break;
+        }
+        else if(s1 == '1' && s2 == '0' && s3 == '1'){ //101
+            isGood = true;
+            break;
+        }
+
+      }
+
+    (isGood) ? printf("Good\n") : printf("Bad\n");
+
+
+    }
+
+
+  return 0;
+}
+

@@ -248,3 +248,64 @@ int main()
 }
 
 
+
+
+/// String Palindrome Algo
+
+//--> reverse korar mirror e dekle   por same takle plindrome bole
+
+// palindrome hobe --> every position e same char thakle
+
+
+
+#include<stdio.h>
+int main()
+{
+    char s[123],tmp[123];
+
+    scanf("%s",s);
+
+    // length calculate first
+
+    int len = 0;
+
+    while(s[len] != 0 ){
+        //length copy temporary te
+        tmp[len] =  s[len];
+        len++;
+    }
+
+    // reverse a string
+    for(int i = 0, j = len-1; i < j; i++,j--){
+
+        char tmpChar = tmp[i];
+        tmp[i] = tmp[j];
+        tmp[j] =  tmpChar;
+
+    }
+
+    bool isEqual = true;
+
+    //comparing s & tmp string
+
+    for(int i = 0; i < len; i++){
+        if(s[i] != tmp[i] ){
+            isEqual = false;
+            break;
+        }
+    }
+ printf("s\n : ");
+  for(int i = 0; i< len; i++) printf("%c ",s[i]);
+   printf("tmp\n : ");
+     for(int i = 0; i< len; i++) printf("%c",tmp[i]);
+
+    if(isEqual ){
+        printf("palindrome\n");
+    }
+    else{
+        printf("Not Palindrome\n");
+    }
+
+  return 0;
+}
+

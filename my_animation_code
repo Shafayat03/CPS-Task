@@ -1,0 +1,126 @@
+#include<stdio.h>
+#include<windows.h>
+
+
+void gotoxy(int x, int y)
+{
+  static HANDLE h = NULL;
+  if(!h)
+    h = GetStdHandle(STD_OUTPUT_HANDLE);
+  COORD c = { x, y };
+  SetConsoleCursorPosition(h,c);
+}
+
+
+int main()
+{
+    int i ,y;
+ for(int i = 5; i <= 30; i++){
+      Sleep(10);
+      gotoxy(i,3);
+      printf("Shafayat Karim"); fflush(stdout);
+
+      Sleep(70);
+      gotoxy(i,3);
+      printf("              "); fflush(stdout);
+
+ }
+
+//square print
+
+  Sleep(100);
+  gotoxy(5,2);
+  printf("*S");
+
+  Sleep(100);
+  gotoxy(13,2);
+  printf("*S");
+
+  Sleep(100);
+  gotoxy(20,2);
+  printf("*S");
+
+  Sleep(100);
+  gotoxy(20,6);
+  printf("*S");
+
+  Sleep(100);
+  gotoxy(13,6);
+  printf("CODE");
+
+  Sleep(100);
+  gotoxy(20,10);
+  printf("*S");
+
+  Sleep(100);
+  gotoxy(13,10);
+  printf("*S");
+
+
+  Sleep(100);
+  gotoxy(5,10);
+  printf("*S");
+
+
+  Sleep(100);
+  gotoxy(5,6);
+  printf("*S");
+
+  printf("*S");
+
+   
+   /// Circle Print
+   
+    Sleep(100);
+    gotoxy(13, 13);
+    printf("CP");
+
+     Sleep(100);
+    gotoxy(18, 12);
+    printf("CP");
+
+       Sleep(100);
+    gotoxy(21, 10);
+    printf("CP");
+
+      Sleep(100);
+    gotoxy(22, 8);
+    printf("CP");
+
+      Sleep(100);
+    gotoxy(13, 3);
+    printf("CP");
+
+       Sleep(100);
+    gotoxy(4, 8);
+    printf("CP");
+
+      Sleep(100);
+    gotoxy(8, 12);
+    printf("CP");
+
+       Sleep(100);
+    gotoxy(5, 10);
+    printf("CP");
+
+       Sleep(100);
+    gotoxy(5, 6);
+    printf("CP");
+
+     Sleep(100);
+    gotoxy(8, 4);
+    printf("CP");
+
+       Sleep(100);
+    gotoxy(21, 6);
+    printf("CP");
+
+     Sleep(100);
+    gotoxy(18, 4);
+    printf("CP");
+
+
+getch();
+  return 0;
+}
+

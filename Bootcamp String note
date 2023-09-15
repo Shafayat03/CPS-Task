@@ -61,3 +61,14 @@ int main()
    cout << s1+ s2<<endl;
 
 }
+
+/// string theke character erase kora print
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+   string s = "Karim";
+   s.erase(2,3);
+   // index input nibe just
+   cout<<s<<endl;
+}

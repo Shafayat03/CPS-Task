@@ -3,3 +3,27 @@ STL String
 Multiple Test case handling
 ASCII Values
 String Concatenation + String Compare 
+
+
+
+
+
+
+/// sort a string
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    //string--> collection of character
+
+    //class
+     string s;
+     cin>>s;
+
+
+ sort(s.begin(),s.end());
+ cout<<s;
+
+}

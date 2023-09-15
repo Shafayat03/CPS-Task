@@ -27,3 +27,7 @@ int main()
  cout<<s;
 
 }
+
+///  reverse sort a string
+ sort(s.rrbegin(),s.rend());
+ cout<<s;

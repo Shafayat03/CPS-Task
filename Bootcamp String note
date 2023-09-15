@@ -31,3 +31,18 @@ int main()
 ///  reverse sort a string
  sort(s.rrbegin(),s.rend());
  cout<<s;
+
+
+/// string size print
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+     string s;
+     cin>>s;
+
+
+ cout<<s.size();
+
+}

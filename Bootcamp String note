@@ -127,3 +127,16 @@ int main()
   char s = '5'
   int value = s - '0';
  cout << value+5<<endl;
+
+
+
+    int n = 123;
+ /// int to string conversion using --- to_string();
+    string s = to_string(n);
+    cout<<s+"kjl"<<endl;
+
+/// string to int conversion --- stoi();
+
+string s = "123";
+int value = stoi(s);
+cout << value+ 2 << endl;

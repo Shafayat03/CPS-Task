@@ -97,3 +97,26 @@ int main()
 
 
 }
+
+
+
+
+
+/// ASCII typecasting
+//0-9
+//48-57
+
+// 97-122 -->  Small Letter
+/// int  to char
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    //int n;
+    //cout<<char(53)<<endl;
+  char s = '5'
+  int value = s-'0';
+ cout << value+5<<endl;
+
+
+}

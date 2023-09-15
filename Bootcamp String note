@@ -140,3 +140,42 @@ int main()
 string s = "123";
 int value = stoi(s);
 cout << value+ 2 << endl;
+
+
+
+
+/// string compare
+
+/// first priority size then char by char check
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string s1 = "abc",s2 = "adc";
+/*
+    if(s1==s2)
+    {
+        cout<<"Same"<<endl;
+    }
+    else{
+        cout<<"Not Same"<<endl;
+    }
+  */
+  /// print  max string
+
+if(s1>s2)
+{
+    cout<<s1<<endl;
+}
+else{
+    cout<<s2<<endl;
+}
+
+
+
+
+
+
+
+}

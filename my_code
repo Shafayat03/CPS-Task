@@ -14,7 +14,7 @@ void gotoxy(int x, int y)
 
 int main()
 {
-    int i ,y;
+    int x, i ,y;
  for(int i = 5; i <= 30; i++){
       Sleep(10);
       gotoxy(i,3);
@@ -45,7 +45,7 @@ int main()
   printf("*S");
 
   Sleep(100);
-  gotoxy(13,6);
+  gotoxy(12,6);
   printf("CODE");
 
   Sleep(100);
@@ -66,7 +66,7 @@ int main()
   gotoxy(5,6);
   printf("*S");
 
-  printf("*S");
+
 
 
    /// Circle Print
@@ -119,8 +119,54 @@ int main()
     gotoxy(43, 4);
     printf("CP");
 
+    x=5;
+    y=16;
+    Sleep(100);
+    while (x<=42)
+    {
+      Sleep(5);
+      gotoxy(x,y);
+      printf("Shafayat Karim"); fflush(stdout);
 
-//  getch();
+      Sleep(70);
+      gotoxy(x,y);
+      printf("              "); fflush(stdout);
+    x++;
+    }
+
+     while (x>=5)
+    {
+      Sleep(5);
+      gotoxy(x,y);
+      printf("Shafayat Karim"); fflush(stdout);
+
+      Sleep(70);
+      gotoxy(x,y);
+      printf("              "); fflush(stdout);
+    x--;
+    }
+
+     while (x<=20)
+    {
+      Sleep(5);
+      gotoxy(x,y);
+      printf("Shafayat Karim"); fflush(stdout);
+
+      Sleep(70);
+      gotoxy(x,y);
+      printf("              "); fflush(stdout);
+    x++;
+    }
+
+    gotoxy(x,y);
+      printf("Shafayat Karim");
+
+
+
+
+
+   getchar();
 
   return 0;
 }
+

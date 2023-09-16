@@ -5,27 +5,19 @@ md shafayat karim
 CSE, International Islamic University Chittagong
 */
 
-#include<stdio.h>
-
-int ADD(int x, int y)
-{
-    int c = x + y;
-
-    return c;
-
-
-}
-
-
+#include<bits/stdc++.h>
+using namespace std;
 int main()
 {
-    int a,b;
-    scanf("%d %d",&a,&b);
-
-    int ADD =  a + b;
-
-    printf("%d\n",ADD);
-
-  return 0;
+    int t;
+    cin>>t;
+    while(t--){
+         int a,b;
+    cin>>a>>b;
+    cout<<a+b<<endl;
+ 
+    }
+ 
+ 
+   
 }
-

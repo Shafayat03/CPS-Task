@@ -34,4 +34,43 @@ int main()
    11111
 
 
+OUTPUT:
+
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    
+    //input N
+    scanf("%d", &N);
+    
+    // Check if N is positive
+    if (N <= 0) {
+        printf("N must be a positive integer.\n");
+        return 1;  // Exit with an error code
+    }
+    
+    // Loop for N rows
+   
+    for (int i = 1; i <= N; i++) {
+        
+        // Loop for each column in a row
+       
+        for (int j = 1; j <= N; j++) {
+            
+            // Print 1 if the row number is odd, 0 if even
+            
+            printf("%d", i % 2);
+        }
+        
+        // Move to the next line after each row
+       
+        printf("\n");
+    }
+    
+    return 0;  
+}
+
+
 

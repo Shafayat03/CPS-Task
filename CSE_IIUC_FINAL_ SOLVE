@@ -73,4 +73,11 @@ int main() {
 }
 
 
+(c)   Input consists of multiple lines, one line per case. Each line contains two positive integers. Your task is to find the Largest number between these two integers. Input is terminted by a line when  both integers are the same.
+ Sample Input                                          Sample Output
+2 5                                                    Largest = 5
+7 6                                                    Largest = 7
+1 70                                                   Largest = 70
+3 3                                                    
+
 

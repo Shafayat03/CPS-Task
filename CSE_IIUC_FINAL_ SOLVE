@@ -26,7 +26,12 @@ int main()
 
 */
 
-
+(b)  Write a C program that reads a positive integer N and prints the following pattern for N rows.For  example, if N = 5, then the output would be:
+   11111
+   00000
+   11111
+   00000
+   11111
 
 
 

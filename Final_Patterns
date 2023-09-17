@@ -1,3 +1,13 @@
+/// pattern 2  Au 18 Cse
+/*
+      CCCC
+       CCC
+        CC
+         C
+*/
+
+
+
 #include<stdio.h>
 int main()
 {

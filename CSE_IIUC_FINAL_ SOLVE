@@ -81,3 +81,36 @@ int main() {
 3 3                                                    
 
 
+OUTPUT:
+
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    while (1) {
+        
+        // Read two positive integers
+      
+        scanf("%d %d", &num1, &num2);
+
+        // Check if both integers are the same
+      
+        if (num1 == num2) {
+            break;    // Exit the loop when both integers are the same
+        }
+
+       
+        // Determine the largest number and print it
+        
+        if (num1 > num2) {
+            printf("Largest = %d\n", num1);
+        }
+        else {
+            printf("Largest = %d\n", num2);
+        }
+    }
+
+    return 0;
+}

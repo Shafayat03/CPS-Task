@@ -114,3 +114,69 @@ int main() {
 
     return 0;
 }
+
+
+
+                                         OR
+
+You will give  T test cases . Each test case contains a non-negative integer N. For each test case, your task is to check whether N is prime or not . (A prime number is a natural number grater that 1 that is not a  product of two smaller natural numbers)
+Sample Input                                              Sample Output
+2                                                          
+17                                                         Prime Number
+27                                                        Not a prime Number
+
+
+
+
+OUTPUT:
+
+
+
+
+#include <stdio.h>
+#include <stdbool.h>
+
+// Function to check if a number is prime
+
+bool isPrime(int n) {
+    if (n <= 1) {
+        return false;
+    }
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main() {
+    int T, N;
+
+    // Read the number of test cases
+    
+    printf("Enter the number of test cases (T): ");
+   
+    scanf("%d", &T);
+
+    for (int i = 0; i < T; i++) {
+        // Read the non-negative integer for each test case
+        
+      
+        printf("Enter a non-negative integer (N) for test case %d: ", i + 1);
+        
+        scanf("%d", &N);
+
+       
+        // Check if N is prime and print the result
+        
+        if (isPrime(N)) {
+            printf("Prime Number\n");
+        }
+        else {
+            printf("Not a prime Number\n");
+        }
+    }
+
+    return 0;
+}

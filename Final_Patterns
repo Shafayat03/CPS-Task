@@ -312,3 +312,56 @@ int main()
 */
 
 
+
+
+
+/// pattern type - 5
+
+/// Opposite type of type 4
+/***
+        1 2 3       A B C              /* for printing space now use this condition
+          1 2         A B
+            1           A                    row = n; row>= 1; row--
+
+
+
+
+
+*/
+
+
+
+
+#include<stdio.h>
+int main()
+{
+
+    int n, row, col;
+
+    scanf("%d",&n);
+
+
+    for(row = n; row >= 1; row--){
+
+        /// for printing space
+        for(col = 1; col<= n - row; col++){
+            printf(" ");
+        }
+
+        /// printing numbers
+
+        for(col = 1; col<=row; col++){
+            printf("%d",col);
+        }
+
+        printf("\n");
+
+    }
+
+
+
+
+
+  return 0;
+}
+

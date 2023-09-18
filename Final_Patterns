@@ -143,3 +143,67 @@ int main()
 
   return 0;
 }
+
+
+
+
+
+
+  ///conbine pattern ascending and decending
+
+/***
+         1             1
+         1 2           2 2
+         1 2 3         3 3 3    --> in second conditon  2nd col loop use conditions --->  (cols < rows)  or use conditon     decemdmg prder --> row =  n-1
+         1 2 3         2 2
+         1 2           1
+         1
+
+
+
+**/
+
+
+    #include<stdio.h>
+    int main()
+    {
+
+
+           int n;
+    scanf("%d",&n);
+
+     /// for ascending order(pattern-1)
+
+    int rows, cols;
+    for(rows = 1; rows <= n; rows++){
+
+        for(cols = 1; cols <= rows; cols++){
+
+            printf("%d ",cols);
+
+        }
+         printf("\n");
+
+    }
+
+
+       /// for descending order(pattern - 2)
+
+    for(rows = n; rows >= 1; rows--){
+
+        for(cols = 1; cols <= rows; cols++){
+                /// for  printing highest pattern just for 1 times we have toh use  conditions -->     cols < rows
+            printf("%d ",cols);
+
+        }
+        printf("\n");
+
+    }
+
+
+
+
+
+      return 0;
+    }
+

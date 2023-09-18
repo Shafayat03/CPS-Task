@@ -61,3 +61,85 @@ int main() {
 
     return 0;
 }
+
+
+
+
+////**** Lab   Tricks for upcoming exam **// 
+/**
+       1                  1
+       1 2                1 0 
+       1 2 3              1 0 1                these kinds o pattern discussion and tricks
+*/
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int t;
+    scanf("%d",&t);
+
+    int rows, cols;
+    for(rows = 1; rows <= t; rows++){
+                    /// jodi triangle banaite chai--> taile cols er loop tah   "cols <= row"  ei condition e chailete hobe
+        for(cols = 1; cols <= rows; cols++){
+            printf("%c ",cols + 64);
+            /// ekoi value akta line e print korle ----> row er man print korbo
+            /// different value print korle ---> columns er man print korbo
+            // 1 0 print korte chaile --> cols % 2
+            /// char er jonno ("%c", cols+ 96);
+                               //64- ...--> add for capital
+                               // 96-  ....   --> add for small letter
+        } printf("\n");
+
+    }
+
+  return 0;
+}
+
+
+
+
+
+
+
+/// Decending order pattern print ---> boro theke choto man
+
+/***
+               1 2 3       1 0 1
+               1 2         0 1
+               1           1                         row er man tah n porjonto cholbe row >= 1 hobe r row er value decrement hobe
+
+               row = n; row >= 1; row--
+
+
+*/
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    int rows, cols;
+    for(rows = n; rows >= 1; rows--){
+                    /// jodi triangle banaite chai--> taile cols er loop tah   "cols <= row"  ei condition e chailete hobe
+        for(cols = 1; cols <= rows; cols++){
+            printf("%c ",cols + 64);
+            /// ekoi value akta line e print korle ----> row er man print korbo
+            /// different value print korle ---> columns er man print korbo
+            // 1 0 print korte chaile --> cols % 2
+            /// char er jonno ("%c", cols+ 96);
+                               //64- ...--> add for capital
+                               // 96-  ....   --> add for small letter
+        } printf("\n");
+
+    }
+
+  return 0;
+}

@@ -207,3 +207,108 @@ int main()
       return 0;
     }
 
+
+
+
+
+
+/// pattern type - 4
+
+
+/**
+      space printing
+
+
+                1             for space print condition -->  Space = n - row
+             1  2              and also a loop inside with this for printing the number also
+          1  2  3
+
+
+
+*/
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+
+    int n, row, col;
+
+    scanf("%d",&n);
+
+
+    for(row = 1; row <= n; row++){
+
+        /// for printing space
+        for(col = 1; col<= n - row; col++){
+            printf(" ");
+        }
+
+        /// printing numbers
+
+        for(col = 1; col<=row; col++){
+            printf("%d",col);
+        }
+
+        printf("\n");
+
+    }
+
+
+
+
+
+  return 0;
+}
+
+
+
+
+
+/// Jamil sir class task in varsity pattern
+/**
+      for n = 5
+                         - - - - *
+                         - - - * *
+                         - - * * *
+                         - * * * *
+                         * * * * *
+
+
+*/
+
+
+/*
+#include<stdio.h>
+int main()
+{
+
+    int n;
+    scanf("%d",&n);
+    int row,col;
+
+    for(row = 1; row <= n;row++){
+        /// loop for - space
+        for(col = 1; col <= n-row; col++){
+            printf("-");
+        }
+
+
+        /// loop for asterac
+
+    for(col = 1; col <=row; col++){
+        printf("*");
+    }
+   printf("\n");
+
+
+    }
+
+  return 0;
+}
+*/
+
+

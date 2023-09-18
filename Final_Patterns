@@ -154,7 +154,7 @@ int main()
 /***
          1             1
          1 2           2 2
-         1 2 3         3 3 3    --> in second conditon  2nd col loop use conditions --->  (cols < rows)  or use conditon     decemdmg prder --> row =  n-1
+         1 2 3         3 3 3    --> in second conditon  2nd col loop use conditions --->  (cols < rows)  or use conditon     descending order --> row =  n-1
          1 2 3         2 2
          1 2           1
          1

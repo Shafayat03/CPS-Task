@@ -504,7 +504,7 @@ int main()
 
 */
 
-
+///Pattern-09
 
 /***        *
           * * *
@@ -529,6 +529,116 @@ int main()
     scanf("%d",&n);
 
     for(row = 1; row <= n; row++){
+      for(col = 1; col <= n-row; col++){
+        printf(" ");
+      }
+      for(col = 1; col <= 2*row-1; col++){
+        printf("*");
+      }
+      printf("\n");
+
+     }
+
+  return 0;
+}
+
+
+///Pattern 10
+
+/**    Reverse pattern print
+
+
+
+          * * * * *
+            * * *
+              *
+
+
+
+
+
+
+*/
+
+
+/*
+
+
+#include<stdio.h>
+int main()
+{
+    int n,row,col;
+    scanf("%d",&n);
+
+    for(row = n; row >= 1; row--){
+      for(col = 1; col <= n-row; col++){
+        printf(" ");
+      }
+      for(col = 1; col <= 2*row-1; col++){
+        printf("*");
+      }
+      printf("\n");
+
+     }
+
+  return 0;
+}
+
+
+*/
+
+
+/**  Combination of pattern 9 and 10
+
+
+
+
+
+
+
+
+
+
+
+
+              *                                *
+            * * *                            * * *
+          * * * * *                        * * * * *       2nd loop e row---> er condition --->
+          * * * * *                          * * *
+            * * *                              *                           (    row = n-1; row>= 1; row--)
+              *
+
+
+
+
+*/
+
+
+#include<stdio.h>
+int main()
+{
+    int n,row,col;
+    scanf("%d",&n);
+
+    ///Upper portion
+
+     for(row = 1; row <= n; row++){
+      for(col = 1; col <= n-row; col++){
+        printf(" ");
+      }
+      for(col = 1; col <= 2*row-1; col++){
+        printf("*");
+      }
+      printf("\n");
+
+     }
+
+
+
+
+   ///Lower portion
+
+    for(row = n; row >= 1; row--){
       for(col = 1; col <= n-row; col++){
         printf(" ");
       }

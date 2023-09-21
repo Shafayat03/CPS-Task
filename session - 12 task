@@ -1,0 +1,185 @@
+///Pattern task - 01
+/*
+#include<stdio.h>
+int main()
+{
+    int n, row, col;
+    scanf("%d",&n);
+
+    for(row = 1; row <= n; row++){
+        for(col = 1; col <= n; col++){
+            printf("*");
+        }
+        printf("\n");
+    }
+
+  return 0;
+}
+*/
+///pattern task-02
+/*
+
+#include<stdio.h>
+int main()
+{
+    int n,m, row, col;
+    scanf("%d %d",&n,&m);
+
+    for(row = 0; row < n; row++){
+        for(col = 0; col < m; col++){
+            printf("*");
+        }
+        printf("\n");
+    }
+
+  return 0;
+}
+
+
+*/
+
+///pattern task-03
+
+/*
+#include<stdio.h>
+int main()
+{
+    int n, row,col;
+    scanf("%d",&n);
+
+    for(row = 1; row <= n; row++){
+        for(col = 1; col <= row; col++){
+            printf("*");
+        }
+        printf("\n");
+    }
+
+  return 0;
+}
+*/
+
+/// pattern task - 04
+/*
+
+#include<stdio.h>
+int main()
+{
+    int n, row, col;
+    scanf("%d",&n);
+    for(row = 1; row <= n; row++){
+        for(col = 1; col <= n - row; col++){
+            printf(" ");
+        }
+        for(col = 1; col <=row; col++){
+            printf("*");
+        }
+        printf("\n");
+    }
+
+  return 0;
+}
+
+*/
+
+/// pattern task 5
+
+/*
+
+
+#include<stdio.h>
+int main()
+{
+    int n, row, col;
+    scanf("%d",&n);
+
+    for(row = 1; row <= n; row++){
+        for(col = 1; col <= n- row; col++){
+            printf(" ");
+
+        }
+
+           for(col = 1; col <= 2*row-1; col++){
+            printf("*");
+
+        }
+        printf("\n");
+    }
+
+  return 0;
+}
+
+*/
+
+/// Pattern task - 6
+
+/*
+
+#include<stdio.h>
+int main()
+{
+    int n, row, col;
+    scanf("%d",&n);
+
+    for(row = n; row >= 1; row--){
+        for(col = 1; col <= n- row; col++){
+            printf(" ");
+
+        }
+
+           for(col = 1; col <= 2*row-1; col++){
+            printf("*");
+
+        }
+        printf("\n");
+    }
+
+  return 0;
+}
+*/
+
+/// pattern task - 07
+
+/*
+
+#include<stdio.h>
+int main()
+{
+    int n, row, col;
+    scanf("%d",&n);
+
+    for(row = 1; row <= n; row++){
+        for(col = 1; col <= n- row; col++){
+            printf(" ");
+
+        }
+
+           for(col = 1; col <= 2*row-1; col++){
+            printf("*");
+
+        }
+        printf("\n");
+    }
+
+    ///Lower portion
+
+     for(row = n-1; row >= 1; row--){
+        for(col = 1; col <= n- row; col++){
+            printf(" ");
+
+        }
+
+           for(col = 1; col <= 2*row-1; col++){
+            printf("*");
+
+        }
+        printf("\n");
+    }
+
+
+*/
+
+
+
+  return 0;
+}
+

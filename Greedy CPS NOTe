@@ -47,3 +47,87 @@ int main()
   return 0;
 }
 
+
+
+
+
+
+/// A. There Are Two Types of Burgers
+
+
+#include<stdio.h>
+
+
+int main()
+{
+      int t;
+      scanf("%d",&t);
+      
+      while(t--){
+        
+        int numBuns, numPatti,numKut,priceHam,priceChicken;
+        
+        scanf("%d %d %d %d %d ",&numBuns,&numPatti, &numKut,&priceHam,&priceChicken);
+        
+        
+        int mxPrice,mnPrice,mxPricePatti, mnPricePatti;
+        
+        
+        if(priceHam > priceChicken){
+            mxPrice = priceHam;
+            mxPricePatti = numPatti;
+            
+            mnPrice = priceChicken;
+            mnPricePatti = numKut; 
+            
+        }
+        else{
+             
+             mxPrice = priceChicken;
+             mxPricePatti = numKut;
+             
+             mnPrice = priceHam;
+             mnPricePatti = numPatti;
+            
+        }
+        
+        int numBurger = numBuns / 2;
+        int profit = 0;
+        
+        if(mxPricePatti >= numBurger ){
+            numBurger = 0;
+            profit += (numBurger * mxPrice);
+        }
+        else{
+            numBurger -= mxPricePatti;
+            
+            profit += ( mxPrice * mxPricePatti);
+            
+        }
+        
+        /// for min profit
+        
+          if(mnPricePatti >= numBurger ){
+           // numBurger = 0;
+            profit += (numBurger * mnPrice);
+        }
+        else{
+           // numBurger -= mnPricePatti;
+            
+            profit += ( mnPrice * mnPricePatti);
+            
+        }
+        
+        
+        printf("%d\n",profit);
+        
+        
+        
+        
+        
+      }
+    
+  
+  return 0;
+}
+

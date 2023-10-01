@@ -1,0 +1,41 @@
+///printing the maximum sub-array  (L. max-subarray ) sheet 3 array codeforces
+
+#include<stdio.h>
+int main()
+{
+    /// input declare all element
+
+   int n,i, x, size, max, t, tc;
+   //declare array
+   int a[100];
+   ///input test case &  loop for outside test case
+   scanf("%d",&t);
+   for(tc = 1; tc <= t; tc++){
+     /// input single test case  inside loop for individual element
+    scanf("%d",&n);
+
+    ///input an array
+
+    for(i = 0; i < n; i++)
+        scanf("%d",&a[i]);
+    /// initialize the sub-array of the array
+    for(size = 1; size <= n;size++)
+    {
+        /// initialize the max sub - array of the array
+
+        for(x = 0; x <= n - size; x++){
+            max = a[x];
+            /// using for loop to check the position calculate the max-sub array
+            for(i = x; i < x + size; i++)
+                if(max < a[i])
+                    max = a[i];
+    /// printing the max sub-array element
+            printf("%d ",max);
+        }
+    }
+    printf("\n");
+   }
+
+  return 0;
+}
+

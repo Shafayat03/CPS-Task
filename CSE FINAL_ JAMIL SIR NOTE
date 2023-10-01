@@ -1,5 +1,24 @@
 ///printing the maximum sub-array  (L. max-subarray ) sheet 3 array codeforces
 
+
+//*** STEPS FOR PRINTING THE SUB_ARRAY**
+
+
+1.declare variables - n, i, array_size, position, max_value.
+2. declare and  test case outside the  loop (1)
+3. input single test case  inside loop for individual element
+4. input an array
+5. initialize the sub-array of the array
+6. initialize the max sub - array of the array
+7. using for loop to check the position calculate the max-sub array
+8. printing the max sub-array element
+
+
+***//
+
+
+
+
 #include<stdio.h>
 int main()
 {

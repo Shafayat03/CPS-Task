@@ -98,7 +98,18 @@ int n, m, i, x, arr[100123], count[100123] = {};
    }
 
    //output segment
-  
+  //*** if only test case given then use not given (m) then only use this
+
+    input: 5---> n 
+           1 2 3 2 5 
+
+then use this ----> :   for(int i = 0;    i < 100123;   i++)
+                                        // array size
+
+    
+***/
+
+
    for(i = 1; i <= m; i++){
       printf("%d\n", count[i]);
    }

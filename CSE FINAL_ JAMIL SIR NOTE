@@ -58,3 +58,61 @@ int main()
   return 0;
 }
 
+
+
+      /******   Frequency Array *********/  V.frequency array(sheet - 3)
+
+steps****
+
+1. declaring all elements and store count zero otherwise shows garbaze
+2. input testcase - n   and the counting element how much i want to count (m)
+3. store arr[i] in x and then count the value of x
+4. output segment
+
+
+
+
+
+#include<stdio.h>
+int main()
+{
+    // declaring all elements and store count zero otherwise shows garbaze
+  
+int n, m, i, x, arr[100123], count[100123] = {};
+  
+// input testcase - n   and the counting element how much i want to count
+ 
+ scanf("%d %d",&n,&m);
+
+   for(i = 0; i < n; i++){
+    scanf("%d",&arr[i]);
+   }
+
+   for(i = 0; i < n; i++){
+     
+  // store arr[i] in x and then count the value of x
+     
+      x = arr[i];
+       count[x]++;
+   }
+
+   //output segment
+  
+   for(i = 1; i <= m; i++){
+      printf("%d\n", count[i]);
+   }
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+

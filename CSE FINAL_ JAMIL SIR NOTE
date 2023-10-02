@@ -93,6 +93,7 @@ int n, m, i, x, arr[100123], count[100123] = {};
   // store arr[i] in x and then count the value of x
      
       x = arr[i];
+     ///count[arr[i]]++;     ---> we can use this also without declaring x variables
        count[x]++;
    }
 

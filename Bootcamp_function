@@ -1,0 +1,98 @@
+sheet - 4 problem (1-4) discussed
+
+///function in c
+
+/// write a function for --->   (output =  5 * input)  pass by value
+
+/*
+
+#include<stdio.h>
+
+//datatype  function_name  parameters
+   int       func(int n)
+{
+    int ans = n*5;
+    return ans;
+}
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    //func(value) -- > for output
+
+    int ans = func(n);
+    //arguments
+
+    printf("%d",ans);
+
+
+  // return 0;
+}
+*/
+/// Pass by reference
+/// &--> dile real value r address k input nibe  mane function e output ja same output main function e o ashbe
+   //& nite hoi alway pass by reference er jonno
+  /*
+    #include<stdio.h>
+
+//datatype  function_name  parameters
+   int       func(int &n)
+{
+    int ans = n*5;
+    return ans;
+}
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    //func(value) -- > for output
+
+    int ans = func(n);
+    //arguments
+
+    printf("%d",ans);
+
+
+  // return 0;
+}
+
+*/
+
+/// pass by value and reference in an array
+
+
+///---> array er modde function call korle autmatik etar address tah jai direct kono copy jabe nah
+
+#include<stdio.h>
+
+void func(int ar[])
+{
+     for(int i = 0; i < 5; i++)
+     {
+
+         ar[i] = ar[i] + 2;
+     }
+
+    for(int i = 0; i < 5; i++){
+        printf("%d ",ar[i]);
+    }
+
+}
+
+int main(){
+
+   int n;
+   int ar[5];
+   for(int i = 0; i < 5; i++){
+    scanf("%d",&ar[i]);
+   }
+
+   func(ar);
+
+
+
+}

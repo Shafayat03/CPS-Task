@@ -130,10 +130,65 @@ int main()
 
  for(i = 0; i < r; i++){
       
-      sum  += a[i][j];
+      sum  += a[i][i];
 
     
       }
      printf("\n");
 
 }
+
+
+
+/// output the sum of main diagonal & secondary diagonal 
+
+#define SIZE 100010
+int main()
+{
+    int r, c, a[101][101], i, j;
+    scanf("%d %d",&r,&c);
+
+    for(i = 0; i < r; i++)
+      {
+
+        for(j = 0;  j < c; j++)
+           scanf("%d",&a[i][j]);
+      }
+   long long sum1 = 0;
+  long long sum2 = 0;
+
+/// output  the sum of the main diagonal
+   
+
+ for(i = 0; i < r; i++){
+      
+      sum  += a[i][i];
+     
+    
+      }
+     printf("\n");
+
+
+/// for secondary diagonal 
+
+for(i = 0; i < r; i++){
+      
+      sum1  += a[i][i];
+ sum2 += a[i][r-i=1];
+    
+      }
+/// another way fo secondary diagonal
+/**
+
+
+   for(i = 0, j = r-1; i < r ; i++, j--)
+{
+   sum 2 += a[i][j];
+
+
+***/
+
+
+
+}
+

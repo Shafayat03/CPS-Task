@@ -60,3 +60,31 @@ int main()
       }
   return 0;
 }
+
+/// Column wise array print
+
+#include<stdio.h>
+#define SIZE 100010
+int main()
+{
+    int r, c, a[101][101], i, j;
+    scanf("%d %d",&r,&c);
+
+    for(i = 0; i < r; i++)
+      {
+
+        for(j = 0;  j < c; j++)
+           scanf("%d",&a[i][j]);
+      }
+
+   /// output 2D  repesenting the column
+      for(i = 0; i < c; i++){
+        for(j = 0;  j < r; j++)
+         printf("%d ",a[j][c]);
+
+         printf("\n");
+      }
+  return 0;
+}
+
+

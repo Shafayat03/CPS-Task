@@ -107,4 +107,4 @@ int main()
   return 0;
 }
 
-
+/// input nth  array and output the sum of the main diagonal of an array 

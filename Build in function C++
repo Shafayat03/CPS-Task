@@ -270,7 +270,198 @@ cout<< *max_element(a+ 0, a+n) << endl;
 
 
 
+const int mx = 1e5 + 123;
+      int a[mx];
 
+int cnt[1000123];
+
+///lcm function
+int lcm(int a, int b)
+{
+
+
+    return ( a*(b  / __gcd(a, b) ) );
+
+}
+
+
+
+
+
+
+
+
+
+
+
+int main()
+{
+    optimize();
+
+
+
+/// sorting only some element of the array
+/*
+
+
+int n;
+cin>>n;
+
+for(int i = 0; i< n; i++)cin>>a[i];
+sort(a+4,a+8);
+
+
+ for(int i = 0; i< 7; i++)cout<< a[i] << " ";
+  cout<< endl;
+
+*/
+
+
+/// max and min element ber kora array er by reference
+
+/*
+int a[] = {2,3,4,5,6};
+
+cout << *max_element(a,a+5) << endl;
+
+
+*/
+
+/// min and max element ber kora golabllay
+
+///globally declare before input array for this
+/*
+      const int mx = 1e5 + 123;
+      int a[mx];
+
+
+*/
+
+/*
+int n;
+cin>>n;
+
+for(int i = 0; i < n; i++) cin >> a[i];
+
+cout<< *max_element(a+ 0, a+n) << endl;
+
+
+*/
+/// Memset () -->   initally (   0 , -1) chara r kicu diye initialize kora jai nah
+/*
+//memset(array, index, sizeof(array)
+  memset(a, -1, sizeof(a));
+
+  for(int i = 0; i < 10; i++)cout<<a[i] << " ";
+  cout<< endl;
+
+ //cout<<sizeof(a)<<endl;
+
+//sizeof--> bite er size declare kore
+
+
+
+*/
+/// memset diye query ber kora
+/*
+int t;
+cin>>t;
+
+while(t--){
+
+   // globally initialize kore dibo r check  korbo ager data clear hoice kina
+    mem(cnt,0);
+
+    int n;
+    cin >> n;
+    for(int i = 1; i <= n; i++){
+
+        cin >> a[i];
+        cnt [a[i]]++;
+
+    }
+     int q;
+     cin >> q;
+
+     while(q--)
+     {
+         int v;
+         cin >> v;
+
+         cout << cnt[v] << endl;
+
+
+     }
+
+
+}
+
+*/
+
+/// isspace --> space print
+/// isupper--> boolen return kore
+/// islower--> lower return
+/// isalpha--> alphabet,
+/// isdigit--> digit return
+/// toupper -- > low theke upper
+/// tolower --> upper theke lower
+/*
+char c = 'a';
+
+cout << isupper(c) << endl;
+
+*/
+/*
+
+char c = 'a';
+
+if(isupper(c)) {
+
+cout << "upper" << endl;
+
+}
+
+if(ilower(c)) {
+
+cout << "lower" << endl;
+
+}
+
+*/
+
+/// strlen --> lenght ber korar jonno
+/// strcmp(s1,s2) ---> 2i ti string comparision bolen retun
+/**
+s1 == s2  > 0
+s1 < s2 : -1
+s1 > s2 : 1
+
+*/
+
+
+///strcat --> dui tah string add kore 1ta te rak e
+///strcpy(s1,s2) --> 1 ta modde r akta copy kore fele rakbe
+
+
+///gcd and lcm
+
+///underscore underscode gcd -->  __gcd
+/*
+
+//cout<< __gcd(3,9)<<endl;
+*/
+
+
+
+/// lcm print
+
+   cout<< lcm(16,25)<<endl;
+
+
+
+
+    return 0;
+}
 
     return 0;
 }

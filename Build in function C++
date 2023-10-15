@@ -1,0 +1,276 @@
+/// Building function  in c++
+
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef double dl;
+
+#define endl "\n"
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+
+
+const int mx = 1e5 + 123;
+      int a[mx];
+
+
+
+int main()
+{
+    optimize();
+
+    ///swap two value
+
+    //built in func --- > tai greeen
+/*
+    int a, b;
+    cin>>a>>b;
+
+    swap(a,b);
+
+    cout<< a <<" " << b << endl;
+
+*/
+
+
+  /// Max function ---> return kore max value
+
+/*
+  int a,b;
+  cin>> a >> b;
+
+  cout  <<  max(a, b)<<endl;
+
+  */
+
+   ///sqrt root function
+/*
+   int a;
+   cin>>a;
+   fraction();
+
+   cout<< sqrt(a) << endl;
+
+*/
+
+/// cbrt( cubic root);
+/*
+ int a;
+   cin>>a;
+   fraction();
+
+   cout<< cbrt(a) << endl;
+
+
+*/
+
+// ceil --> closet integer  max value ber kora
+/// ceil---> upor e tula     upor e round korle use korbo
+//exm--> 3.212  = 4;
+
+/// floor --> down kora       niche namaile
+//exm-> 4.25 = 4;
+//Lowest integer  max value ber ko
+
+// fllor int cypecast
+
+///round --> .5 porjonto tulbo
+// closer integer value teh convert kore
+
+
+
+/// ceil
+/*
+double d;
+ cin>>d;
+ cout<<ceil(d)<< endl;
+
+*/
+
+/// floor
+/*
+double d;
+ cin>>d;
+ cout<<floor(d)<< endl;
+*/
+
+///round
+
+  /*
+  double d;
+ cin>>d;
+ cout<<round(d)<< endl;
+
+*/
+
+/// Reverse function --- By reference
+
+/*
+//a--> reference
+// *a dile --> reference er value print kore
+//*(a+1)--> 1 number index er value pabo same serially a add kore kore iterate kore index er value gula ber korte pari
+
+
+int  a[100123];
+
+a[0] =  4;
+cout<<*a<<endl;
+
+
+*/
+/// Reversing an arraay usin reverse and input an array
+/*
+int a[] = {2,3,4,5,7,6};
+
+reverse(a, a + 6);
+
+
+for(int i = 0; i< 6; i++) cout << a[i] << " ";
+cout << endl;
+
+
+*/
+/// input whole array and n size and reverse it
+
+///globally declare   before input array for this
+/*
+      const int mx = 1e5 + 123;
+      int a[mx];
+
+
+*/
+
+
+/*
+
+int n;
+cin>>n;
+for(int i = 0; i < n; i++)cin>>a[i];
+
+reverse(a, a+n);
+
+for(int i = 0; i< n; i++)cout<< a[i] << " ";
+cout<< endl;
+
+
+*/
+/// reverse only a  segment of an array
+
+///globally declare   before input array for this
+/*
+      const int mx = 1e5 + 123;
+      int a[mx];
+
+
+*/
+
+
+/*
+  int n;
+ cin>>n;
+ for(int i = 0; i < n; i++)cin>>a[i];
+
+ reverse(a+3, a+8);
+
+ // reverser only 3rd element to 8th element
+
+  for(int i = 0; i< n; i++)cout<< a[i] << " ";
+  cout<< endl;
+
+*/
+
+/// sorting
+
+/*
+
+int a[] = {5,2,1,6,5,4,2};
+
+sort(a, a+7);
+
+
+
+ for(int i = 0; i< 7; i++)cout<< a[i] << " ";
+  cout<< endl;
+
+*/
+
+/// sorting using varible input
+
+
+///globally declare before input array for this
+/*
+      const int mx = 1e5 + 123;
+      int a[mx];
+
+
+*/
+
+/*
+int n;
+cin>>n;
+
+for(int i = 0; i< n; i++)cin>>a[i];
+sort(a,a+n);
+
+
+ for(int i = 0; i< 7; i++)cout<< a[i] << " ";
+  cout<< endl;
+
+*/
+
+/// sorting only some element of the array
+/*
+
+
+int n;
+cin>>n;
+
+for(int i = 0; i< n; i++)cin>>a[i];
+sort(a+4,a+8);
+
+
+ for(int i = 0; i< 7; i++)cout<< a[i] << " ";
+  cout<< endl;
+
+*/
+
+
+/// max and min element ber kora array er by reference
+
+/*
+int a[] = {2,3,4,5,6};
+
+cout << *max_element(a,a+5) << endl;
+
+
+*/
+
+/// min and max element ber kora golabllay
+
+///globally declare before input array for this
+/*
+      const int mx = 1e5 + 123;
+      int a[mx];
+
+
+*/
+
+/*
+int n;
+cin>>n;
+
+for(int i = 0; i < n; i++) cin >> a[i];
+
+cout<< *max_element(a+ 0, a+n) << endl;
+
+
+*/
+
+
+
+
+
+
+    return 0;
+}

@@ -1,0 +1,71 @@
+
+///Write a C program to check Whether a matrix is symmetric or not.
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int i, j, row, col, count = 0;
+
+    /// input row  and column
+    scanf("%d %d",&i,&j);
+
+    if(i != j)
+    {
+        exit(0);
+    }
+
+    /// initialize 2D array
+
+    int a[i][j],b[i][j];
+
+
+
+
+    for(row = 0; row < i; row++){
+        for(col = 0; col  < j; col++){
+            scanf("%d",&a[row][col]);
+        }
+    }
+
+    /// Transpose of matrix
+
+    for(row = 0; row <i; row++){
+        for(col  = 0; col < j; col++)
+        {
+            b[col][row] = a[row][col];
+        }
+    }
+
+
+    ///check if matrix a equals to matrix b or not
+
+    for(row = 0; row  < i; row++){
+        for(col = 0; col < j; col++){
+            if(a[row][col]  != b[row][col]){
+                //count = 1;
+                count++;
+                break;
+            }
+        }
+    }
+
+
+
+
+
+    if(count== 0)
+    {
+        printf("YES\n");
+    }
+    else{
+        printf("NO\n");
+    }
+
+
+
+
+  return 0;
+}
+
+

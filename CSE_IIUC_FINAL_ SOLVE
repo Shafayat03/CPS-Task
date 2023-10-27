@@ -182,6 +182,76 @@ int main() {
 }
 
 
+
+2(a)
+
+#include <stdio.h>
+
+int m=15;
+int change(int n){
+    m = m+10;
+    return m;
+}
+
+int main()
+{
+    int m = 10;
+    printf("%d",change(m));
+   
+    return 0;
+}
+
+
+
+
+output: 25
+
+
+
+2(b)write a function that takes a positive integer and returns the summation of all the factors (Excluding the I and the number itself) of that number.
+    Demonstrate your function in a complete program.for example if the input number is 10 then the output in 7
+
+
+Solution: 
+
+
+#include <stdio.h>
+
+int sumOfFactors(int n) {
+    int sum = 0;
+    
+    // Loop through numbers from 2 to n/2 to find factors
+    for (int i = 2; i <= n / 2; i++) {
+        if (n % i == 0) {
+            sum += i;
+        }
+    }
+    
+    return sum;
+}
+
+int main() {
+    int num;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num <= 0) {
+        printf("Please enter a positive integer.\n");
+    } else {
+        int result = sumOfFactors(num);
+        printf("The summation of factors of %d (excluding 1 and itself) is: %d\n", num, result);
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
 /// 4). Given two numbers N and M. a 2D array of size N*M and a number x. determine whether X exists in the 2D array A or Not
 
 /// S. search in matrix in codeforces

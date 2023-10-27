@@ -599,3 +599,61 @@ int main() {
 
     return 0;
 }
+
+5(c)
+/*
+write a C programme to read the final marks on N students. Write it to the file called CSE-1121.txt and close the file agaiin. 
+Again read the same data from CSE-1121.txt file, display it on the screen and close the file
+*/
+
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    // Declare an array to store the final marks
+    int finalMarks[n];
+
+    // Read the final marks for N students
+    for (int i = 0; i < n; i++) {
+        printf("Enter final marks for student %d: ", i + 1);
+        scanf("%d", &finalMarks[i]);
+    }
+
+    // Write the data to a file
+    FILE *file = fopen("CSE-1121.txt", "w");
+    if (file == NULL) {
+        printf("Error opening the file.\n");
+        return 1;
+    }
+
+    for (int i = 0; i < n; i++) {
+        fprintf(file, "%d\n", finalMarks[i]);
+    }
+
+    // Close the file
+    fclose(file);
+
+    // Read data from the file and display it on the screen
+    file = fopen("CSE-1121.txt", "r");
+    if (file == NULL) {
+        printf("Error opening the file.\n");
+        return 1;
+    }
+
+    printf("Final marks from the file:\n");
+    for (int i = 0; i < n; i++) {
+        int mark;
+        if (fscanf(file, "%d", &mark) == 1) {
+            printf("%d\n", mark);
+        }
+    }
+
+    // Close the file
+    fclose(file);
+
+    return 0;
+}

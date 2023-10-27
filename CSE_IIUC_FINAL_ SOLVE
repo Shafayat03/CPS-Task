@@ -532,3 +532,70 @@ int main()
 }
 
 
+
+
+
+5.(b)
+/*
+Ques:
+suppose we have  a list of students names, ID Numbers and Cgpa. suppose there are range of cgpa from 1.00 -4.00( interval between two consecutive cgpa in 0.25). 
+Write a C programme that will perform the following tasks : take the above data as input and put it into an array of structure.
+The numbers of students N will also be in input to your programm first . Define your own structure. Assume that the names are single word names with max length of 20.
+The program should print out an ordered list of students and cgpa. i.e students with 4.00 cgpa should be listed first, students with 3.75 grade next and so forth 
+
+input:                                                                                         output:
+
+3
+Ema   C201232   3.75                                                     Khaleda  C201225  4.00
+Sanzana  C201237  3.00                                                   Ema   C201232   3.75 
+Khaleda  C201225  4.00                                                   Sanzana  C201237  3.00     
+
+
+*/
+
+
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    char name[21];
+    char id[9];
+    float cgpa;
+};
+
+void insertionSort(struct Student arr[], int n) {
+    int i, j;
+    struct Student key;
+    for (i = 1; i < n; i++) {
+        key = arr[i];
+        j = i - 1;
+
+        while (j >= 0 && arr[j].cgpa < key.cgpa) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    struct Student students[n];
+
+    for (int i = 0; i < n; i++) {
+        printf("Enter the name, ID, and CGPA for student %d: ", i + 1);
+        scanf("%s %s %f", students[i].name, students[i].id, &students[i].cgpa);
+    }
+
+    insertionSort(students, n);
+
+    printf("Ordered list of students and CGPA:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%s %s %.2f\n", students[i].name, students[i].id, students[i].cgpa);
+    }
+
+    return 0;
+}

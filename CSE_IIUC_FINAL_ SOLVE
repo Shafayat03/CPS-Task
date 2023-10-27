@@ -293,6 +293,28 @@ int main() {
 }
 
 
+2(c) 
+#include<stdio.h>
+
+ int fun(int n)
+ {
+     int f;
+     if(n <= 1)return 1;
+     if(n%2==0) return f(n/2);
+     return f(n/2)+f(n/2+1);
+ }
+
+
+int main()
+{
+    
+    int n = 11 + (3 % 2);
+    printf("%d",func(11));
+    
+    return 0;
+}
+
+solution: 
 
 
 

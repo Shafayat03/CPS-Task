@@ -1,0 +1,259 @@
+
+/// array pass in function
+
+/*
+
+#include<stdio.h>
+
+
+
+int sum(int a[],int p)
+{
+    int i, x = 0;
+    for(i = 0; i < p; i++)
+    {
+        x += a[i];
+    }
+    return x;
+}
+
+
+int main()
+{
+    int arr[10] = {1,3,6,2}, n = 4;
+
+   // array pass kore dile summation dekhabe
+
+    int s = sum(arr,n);
+
+    printf("%d",s);
+
+  return 0;
+}
+
+*/
+/// string pass in function
+
+/// Strlen funciton making using function
+
+
+/*
+
+#include<stdio.h>
+
+
+
+int str_len(char a[100])
+{
+    int i, x = 0;
+    for(i = 0; a[i] != '\0'; i++)
+    {
+        x++;
+    }
+    return x;
+}
+
+
+int main()
+{
+   char str[100] = "hello World";
+
+
+    int l = str_len(str);
+
+    printf("%d",l);
+
+  return 0;
+}
+*/
+
+
+/// main fuction e kono value pass  korle setah always oi value tai pass korbe
+/// void / int diye pass korle setah nibe nah ----> always local variable e return korbe
+
+
+/// Pass by value
+
+/*
+#include<stdio.h>
+   // x = n
+void fun(int x)
+{
+    x = x * 2;
+}
+
+int main()
+{
+    int n = 10;
+    printf("%d\n",n);
+
+    fun(n);
+
+  return 0;
+}
+
+
+*/
+
+
+
+
+/// passs by reference --> jokon amra array pass kori function e tokon shodu eti reference e pass kore nah eta nije main function e chole jai ebong value tah return kore
+
+/// normal variable pass korle eta pass by value hobe always
+/*
+
+#include<stdio.h>
+
+
+void fun(int x[100])
+{
+    int i ;
+    for(i=0; i < 4; i++)
+    {
+        x[i] *= 10;
+    }
+
+}
+
+
+int main()
+{
+    int arr[100] = {1,2,3,4},i;
+    fun(arr);
+
+    for(i = 0; i < 4 ; i++)
+    {
+
+        printf("%d ", arr[i]);
+    }
+
+
+
+
+
+    return 0;
+}
+*/
+
+
+
+
+/// making a reverse function using array
+
+///(selection sort 1st er tah r last er tah swap )
+
+/*
+
+#include<stdio.h>
+
+
+void reverse(int x[100],int n)
+{
+    int i = 0, j = n-1;
+
+  //  1 2 3 4 5 6
+  //  6 5 4 3 2 1
+
+
+
+    for( ; i < j ; i++,j--){
+        int t = x[i];
+       x[i] = x[j];
+        x[j] = t;
+    }
+}
+
+
+
+int main()
+{
+    int arr[100] = {1,2,3,4,5,6}, i, n = 6;
+
+    reverse(arr,n);
+    printf("%d\n",n);
+
+    for(i = 0; i < n ;i++){
+            printf("%d ", arr[i]);
+    }
+
+
+    return 0;
+}
+
+
+
+
+*/
+
+
+
+
+/// str_cpy function making
+
+ 
+ /*
+
+#include<stdio.h>
+
+
+  void strcopy(char s1[100], char s2[100])
+{
+    int i;
+
+    for(i = 0;  s2[i] != '\0'; i++ )
+
+       s1[i] = s2[i];
+
+       s1[i] = '\0';
+}
+
+
+
+    /*
+        s1[0] = s2[0]
+        s1[1] = s2[1]
+        s1[2] = s2[2]
+
+        e rokom copy korar jonnno loop chalai eta basic eta  code e likha jabe enah
+
+
+
+
+    */
+
+
+
+/*
+
+
+
+int main()
+{
+    char s1[100], s2[100] = "hello";
+    strcopy(s1,s2);
+
+    printf("%s",s1);
+    return 0;
+}
+
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

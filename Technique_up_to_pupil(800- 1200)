@@ -1,0 +1,178 @@
+/// Frequency count / Hashing /          using map 
+
+#include<bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int a[n];
+
+    for(int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+
+    map<int,int>m;
+
+    for(int i = 0; i <n; i++)
+    {
+        m[a[i]]++;
+    }
+
+
+    /// printing map auto
+
+    for(auto it : m)
+    {
+        cout << it.first << " " << it.second << endl;
+    }
+
+
+    return 0;
+}
+
+
+/// Prefix Sum technique for  1D array
+
+
+/**
+
+   Given an array of N integers. Given q queries and each query given L and R print sum of array elements from index
+   L to R (L, R included)
+
+   constraints:
+   1 <= N <= 10^5
+   1 <= a[i] <= 10^9
+   1 <= q <= 10 ^ 5
+   1 <= L , R <= N
+
+
+
+n --> 6
+      3 6 2 8 9 2
+
+q---> 4
+                               output
+      2 3                       8
+      4 6                       10
+      1 5                       12
+      3 6                       4
+
+*/
+
+
+
+
+
+#include<bits/stdc++.h>
+
+#define endl '\n'
+
+using namespace std;
+
+const int N = 1e5 + 10;
+long long  a[N];
+
+long long  presum[N];
+
+int main()
+{
+    long long n,q;
+    cin >> n >> q;
+
+    for(int i = 1; i <= n; ++i)
+    {
+        cin >> a[i];
+        presum[i] = presum[i-1] + a[i];
+    }
+
+   // int q;
+   // cin >> q;
+
+    while(q--)
+    {
+        int l,r;
+        cin >> l >> r;
+
+        cout << presum[r] - presum[l-1] << endl;
+
+    }
+
+
+
+
+}
+
+
+
+/// Prefix_ sum technique  ---> square sum of a  2D array 
+/**
+
+
+Given   2D array a of N*N  integers. Given Q queries and in each query given a,b,c and d
+print sum of square represented by(a,b) as top left point and (c,d) as bottom right point
+
+constraints:
+1 <= N <= 10^3
+1 <= a[i][j] <= 10^9
+1 <= q <= 10^5
+1 <= a,b,c,d <= N
+
+
+
+
+n --> 3
+      3 6 2
+      8 9 2
+      3 4 1
+
+q-->  2                   output:
+      1 1 2 2                26
+      1 2 3 3                24
+
+**/
+
+#include<bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+const int N = 1e3 + 10;
+
+
+int a[N][N];
+
+long long presum[N][N];
+int main()
+{
+    int n;
+    cin >> n;
+
+    for(int i = 1; i <= n; ++i)
+    {
+        for(int j = 1; j <= n; ++j){
+            cin >> a[i][j];
+            presum[i][j] = a[i][j]+ presum[i-1][j] + presum[i][j-1] - presum[i-1][j-1];
+        }
+    }
+
+    int q;
+    cin >> q;
+
+    while(q--)
+    {
+        int a,b,c,d;
+        cin >> a >> b >> c >> d;
+
+        cout << presum[c][d] - presum[a-1][d] - presum[c][b-1] + presum[a-1][b-1] << endl;
+
+
+    }
+
+
+
+
+    return 0;
+}

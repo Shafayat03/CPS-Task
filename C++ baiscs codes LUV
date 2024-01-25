@@ -1,0 +1,229 @@
+#include<bits/stdc++.h>
+#define endl '\n'
+using namespace std;
+
+
+///digit_sum function for adding more numbers digitsum
+
+int digit_sum(int n)
+{
+    int digit_sum = 0;
+    while(n )
+    {
+
+        digit_sum = digit_sum + n % 10;
+
+        n /= 10;
+    }
+    return digit_sum;
+}
+
+
+
+/// By references function
+
+ ///    & use korle eti reference pass kore dei main function e
+void increment(int &n)
+{
+    n++;
+   // n1++;
+}
+
+
+
+
+
+int main()
+{
+ /// spoj life, universe and everything
+
+ /*
+    while(1){
+          int n;
+    cin >> n;
+        if(n == 42) {
+            break;
+        }
+       // continue;
+cout << n << endl;
+    }
+
+
+
+*/
+
+/// sum of digits ---> codechefs
+
+/*
+int t;
+cin >> t;
+while(t--)
+{
+
+
+int n;
+cin >> n;
+int digit_sum = 0;
+while(n > 0)
+{
+    int last_digit = n % 10;
+
+   digit_sum += last_digit;
+   n /= 10;
+}
+cout << digit_sum << endl;
+
+}
+}
+
+*/
+
+
+/// getline er age  -- >>   cin.ignore()         eta cursor k akta new line e shift kora tah k bad diye input nei
+
+///acturally buffer er jonnoo eta got e
+/*
+
+int tc;
+cin >> tc;
+
+ cin.ignore();
+while(tc--)
+{
+
+    string s;
+      getline (cin, s);
+
+      cout << s << endl;
+}
+
+
+*/
+
+/// reverse a string ---> without using STL library function
+
+/*
+
+string s;
+cin >> s;
+
+string rev_ ;
+
+for(int i = s.size() - 1; i >= 0; --i)
+{
+    rev_.push_back(s[i]); /// rev string e s string er ith index k bar bar push korbo sesh e rev_ string k output dekhabbo
+}
+
+cout << rev_ << endl;
+
+*/
+
+
+
+/// big number input in string  ---->>   which are so big and we cannot store them in long long
+
+/// suppoose input -->>   123244567789909000085543255
+
+/**
+if we want to print the last digit in charcter form
+    also in int
+*/
+
+
+
+/**
+
+string s;
+cin >> s;
+
+///   int last_digit = (char)s[s.size() - 1]; /// accessing last digit ot the string  as character
+/// cout << last_digit << endl;///output as a characteer
+
+/// accesssing as a int
+
+int last_digit =s[s.size() - 1] - '0'; /// set character to int datatype
+
+cout << last_digit;  /// 5
+
+
+*/
+
+
+/// string palindrome check ----> without using STL library
+
+/*
+
+
+string s;
+cin >> s;
+
+string rev_ ;
+
+for(int i = s.size() - 1; i >= 0; --i)
+{
+    rev_.push_back(s[i]); /// rev string e s string er ith index k bar bar push korbo sesh e rev_ string k output dekhabbo
+}
+
+cout << rev_ << endl;
+
+if(s== rev_) cout << "Palindrome" << endl;
+else cout << "Not Palindrome" << endl;
+
+
+
+
+
+*/
+
+
+/// sum of all digits of an array
+
+/*
+
+
+int n;
+cin >> n;
+
+int a[n];
+
+for(int i = 0;i < n; i++)
+{
+    cin >> a[i];
+}
+
+int sum = 0;
+
+for(int i = 0;i < n; i++)
+{
+    sum += a[i];
+}
+
+cout << sum << endl;
+
+
+*/
+
+/// digit_sum using function
+
+/*
+
+int a,b;
+
+cin >> a >> b;
+
+int ans = digit_sum(a) + digit_sum(b); /// 123  + 2345
+
+cout <<  ans << endl; /// 20
+
+
+*/
+/// By references function check --->>> eta sorasori oi function er value r kaj tah kore main function e pass kore dei
+
+int a = 3;
+
+increment(a);  /// a er reference void function ee pass hobe ebong a er man 1 barbe
+
+cout << a << endl; /// 4
+
+    return 0;
+}

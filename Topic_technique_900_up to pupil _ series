@@ -227,7 +227,86 @@ int main()
         }
         
         
-           
+
+
+
+
+           ///InBuild Sort STL c++ ( inbuild --->>  insertion + heap + quick ) sort er mixture
+
+
+         ///complexity >> Nlg(N)
+
+         /*
+
+         int n;
+         cin >> n;
+
+         int a[n]; /// vector<int>v(n)
+
+         for(int i = 0;i < n; ++i){
+            cin >> a[i];
+         }
+
+         sort(a, a+n); /// (v.begin(), v.end())
+          for(int i = 0;i < n; ++i){
+           cout << a[i] << "  " ;
+         }
+         cout << endl;
+
+*/
+
+
+     /// Comparator Function
+
+     /**
+
+         bool comp(int a,int b){
+
+             if(a > b ) return true;
+                return false;
+         }
+
+     */
+
+
+
+       /// modular arithmetics
+
+
+       /// n % m ber korte hobe j kan e n er range onek beshi
+
+
+      /// big mod -->>  string e input niye every character wise access korbo the n divisibily check korbo
+      /*
+          int t;
+          cin >> t;
+          while(t--){
+          string s;
+          cin >> s;
+          int m;
+          cin >> m;
+          int ans = 0;
+
+          for(int i = 0;i < s.size(); i++)
+          {
+              ans = ans * 10 + (s[i] - '0');
+              ans = ans % m;
+          }
+
+          if(ans % m == 0) cout << "YES" << endl;
+          else cout << "NO"<<endl;
+
+
+          }
+*/
+
+
+
+
+
+
+
+
          ///complexity >>
           ///complexity >>
           ///complexity >>

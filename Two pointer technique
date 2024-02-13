@@ -1,0 +1,197 @@
+
+ /// find the pair in the arrray whoose sum is equal to x
+
+
+#include<bits/stdc++.h>
+typedef long long ll;
+#define endl '\n'
+using namespace std;
+
+bool solve(int arr[],int x, int n){
+
+   int i = 0;
+   int j = n - 1;
+
+   while(i < j)
+   {
+       int sum = arr[i] + arr[j];
+
+       if(sum == x) return true;
+       if(sum > x) j--;
+       else i++;
+   }
+
+return false;
+
+
+}
+
+
+
+
+
+int main()
+{
+
+
+
+    /// find the pair in the arrray whoose sum is equal to x
+
+    int n;
+
+    cin >> n;
+
+    int arr[n + 3];
+
+    for(int i = 0; i < n;i++) cin >> arr[i];
+
+    sort(arr, arr+n);
+
+    int x;
+    cin >> x;
+
+    bool ans = solve(arr,x,n);
+
+
+if(ans == true ) cout << "YES" << endl;
+else cout << "NO" << endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /// find the closest pair from two sorted arrays
+    /// find the pair in array whoose sum is closest to x
+    /// find all triplests with zero sum
+    /// find a triplet that sum to a given value
+    /// find a triplet such that sum of two equals to third element
+    ///find four elements that sum to a given value
+    /// solve some problem...
+
+
+
+
+    return 0;
+}
+
+
+
+ /// find the pair in the arrray whoose sum is equal to x(index tah soho print korte bolle eta use korbo)
+
+
+
+
+///input :    5
+              1 2 3 4 5
+target value: 9   
+
+ output :     YES
+              4 5 
+
+
+#include<bits/stdc++.h>
+typedef long long ll;
+#define endl '\n'
+using namespace std;
+
+
+
+int val1, val2;
+
+
+bool solve(int arr[],int x, int n){
+
+   int i = 0;
+   int j = n - 1;
+
+   while(i < j)
+   {
+       int sum = arr[i] + arr[j];
+
+       if(sum == x) {
+            val1 = arr[i]; /// starting index k store korbe
+            val2 = arr[j]; /// ending index k store korbe
+            return true;
+       }
+       if(sum > x) j--;
+       else i++;
+   }
+
+return false;
+
+
+}
+
+
+
+
+
+int main()
+{
+
+
+
+    /// find the pair in the arrray whoose sum is equal to x
+
+    int n;
+
+    cin >> n;
+
+    int arr[n + 3];
+
+    for(int i = 0; i < n;i++) cin >> arr[i];
+
+    sort(arr, arr+n);
+
+    int x;
+    cin >> x;
+
+    bool ans = solve(arr,x,n);
+
+
+if(ans == true ){
+    cout << "YES" << endl;
+
+    cout << val1 << " " << val2 << endl; /// value gula kothai ace setah print korteci
+
+
+}
+else cout << "NO" << endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /// find the closest pair from two sorted arrays
+    /// find the pair in array whoose sum is closest to x
+    /// find all triplests with zero sum
+    /// find a triplet that sum to a given value
+    /// find a triplet such that sum of two equals to third element
+    ///find four elements that sum to a given value
+    /// solve some problem...
+
+
+
+
+    return 0;
+}
+
+
+
+

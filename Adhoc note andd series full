@@ -213,3 +213,64 @@ for(int i=0;i<n;i++)ar[i]+=dif[i];
 
 
 
+
+
+
+/// 2-D prefix sum
+
+/**
+        Technique:
+        1. first row er prefix sum ber kore fela
+        2. first column er prefix sum ber kore fela
+        3.formuala use : prefix[i][j] = prefix[i][j-1] + prefix[i-1][j] + arr[i][j] - prefix[i-1][j-1]
+        
+
+*/
+
+
+
+#include<bits/stdc++.h>
+using  namespace  std;
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    int ar[n][m];
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            cin>>ar[i][j];
+        }
+    }
+
+    int pre[n][m];
+    pre[0][0]=ar[0][0];
+
+///prefix sum of row
+
+for(int i=1;i<m;i++)pre[0][i]=pre[0][i-1]+ar[0][i];
+
+///prefix sum of column
+
+for(int i=1;i<n;i++)pre[i][0]=pre[i-1][0]+ar[i][0];
+
+    for(int i=1;i<n;i++)
+    {
+        for(int j=1;j<m;j++)
+        {
+                /// formula use 
+
+            pre[i][j]=pre[i][j-1]+pre[i-1][j]+ar[i][j]-pre[i-1][j-1];
+        }
+    }
+
+/// print the prefix array
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)cout<<pre[i][j]<<" ";
+        cout<<endl;
+    }
+
+}
+

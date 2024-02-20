@@ -371,7 +371,7 @@ int main()
 /// koita permutation   asee   ber kora 
 
 kotogula permutation ready kora shombov arrray othoba string er , dui tah string er permutation er value r compare, 
-vector er permutation koita countkora evabe ashe question
+vector er permutation koita countkora evabe ashe question, kon permutation kiro k km man dei ei type er question aste pare
 
 /// string er permutation
 

@@ -274,3 +274,30 @@ for(int i=1;i<n;i++)pre[i][0]=pre[i-1][0]+ar[i][0];
 
 }
 
+
+
+/// Check if a * b  is greater than 10^18 avoiding  integer overflow
+
+
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    longl  long int a,b;
+    cin >> a >> b;
+    long long int p = 10e18;
+    long long int c = p / a;
+
+
+  if(b > c) cout << "Big" << endl;
+  else cout << "Small" << endl;
+
+
+    return 0;
+}
+
+

@@ -115,6 +115,9 @@ void faltu( T arg, const hello &... rest) {
                 faltu(rest...);
 }
 
+/***************************************** Part -1 ********************************************\
+
+
 const int N = 1e9 + 123;
 /*
 
@@ -173,12 +176,12 @@ int main()
     optimize();
 
     /**
-          number theroy : Divisors, Multiples , Prime Numbers, GCD
+      part - 1 :     number theroy : Divisors, Multiples , Prime Numbers, GCD
 
-          Modulo Arithmetic : Find the mod 10^9 + 7
+      part - 2 :     Modulo Arithmetic : Find the mod 10^9 + 7
 
 
-          Basic Combinatorics : Permutation(nPr), Combinations(nCr)
+      part - 3 :     Basic Combinatorics : Permutation(nPr), Combinations(nCr)
 
 
 
@@ -348,3 +351,14 @@ cout << gcd(a,b);
 
     return 0;
 }
+
+  /*********************************** END of Part - 1 **********************************************\
+
+
+
+
+
+//*********************************** Starting  Part - 2 ******************************************\
+
+
+

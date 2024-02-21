@@ -1,0 +1,350 @@
+//In the name of ALLAH
+
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef vector<ll> vl;
+typedef vector<vi> vvi;
+typedef vector<vl> vvl;
+typedef pair<int,int> pii;
+typedef pair<double, double> pdd;
+typedef pair<ll, ll> pll;
+typedef vector<pii> vii;
+typedef vector<pll> vll;
+typedef double dl;
+
+#define PB push_back
+#define F first
+#define S second
+#define MP make_pair
+#define endl '\n'
+#define all(a) (a).begin(),(a).end()
+#define sz(x) (int)x.size()
+#define mid(l,r) ((r+l)/2)
+#define left(node) (node*2)
+#define right(node) (node*2+1)
+#define mx_int_prime 999999937
+
+const double PI = acos(-1);
+const double eps = 1e-9;
+const int inf = 2000000000;
+const ll infLL = 9000000000000000000;
+#define MOD 1000000007
+
+#define mem(a,b) memset(a, b, sizeof(a) )
+#define gcd(a,b) __gcd(a,b)
+#define sqr(a) ((a) * (a))
+
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+#define file() freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
+
+typedef vector<int>::iterator vit;
+typedef set<int>::iterator sit;
+
+
+int dx[] = {0, 0, +1, -1};
+int dy[] = {+1, -1, 0, 0};
+//int dx[] = {+1, 0, -1, 0, +1, +1, -1, -1};
+//int dy[] = {0, +1, 0, -1, +1, -1, +1, -1};
+
+
+
+template < typename F, typename S >
+ostream& operator << ( ostream& os, const pair< F, S > & p ) {
+            return os << "(" << p.first << ", " << p.second << ")";
+}
+
+template < typename T >
+ostream &operator << ( ostream & os, const vector< T > &v ) {
+            os << "{";
+                for(auto it = v.begin(); it != v.end(); ++it) {
+                                if( it != v.begin() ) os << ", ";
+                                        os << *it;
+                                            }
+                    return os << "}";
+}
+
+template < typename T >
+ostream &operator << ( ostream & os, const set< T > &v ) {
+            os << "[";
+                for(auto it = v.begin(); it != v.end(); ++it) {
+                                if( it != v.begin() ) os << ", ";
+                                        os << *it;
+                                            }
+                    return os << "]";
+}
+
+template < typename T >
+ostream &operator << ( ostream & os, const multiset< T > &v ) {
+            os << "[";
+                for(auto it = v.begin(); it != v.end(); ++it) {
+                                if( it != v.begin() ) os << ", ";
+                                        os << *it;
+                                            }
+                    return os << "]";
+}
+
+template < typename F, typename S >
+ostream &operator << ( ostream & os, const map< F, S > &v ) {
+            os << "[";
+                for(auto it = v.begin(); it != v.end(); ++it) {
+                                if( it != v.begin() ) os << ", ";
+                                        os << it -> first << " = " << it -> second ;
+                                            }
+                    return os << "]";
+}
+
+#define dbg(args...) do {cerr << #args << " : "; faltu(args); } while(0)
+
+void faltu () {
+            cerr << endl;
+}
+
+template <typename T>
+void faltu( T a[], int n ) {
+            for(int i = 0; i < n; ++i) cerr << a[i] << ' ';
+                cerr << endl;
+}
+
+template <typename T, typename ... hello>
+void faltu( T arg, const hello &... rest) {
+            cerr << arg << ' ';
+                faltu(rest...);
+}
+
+const int N = 1e9 + 123;
+/*
+
+/// seive function
+#define SIEVE
+int primes[N];
+vector<int>pr;
+void sieve(){
+
+
+   for(int i = 2;i  < N; i++){
+
+    if(primes[i]== 0){
+        pr.push_back(i);
+
+        for(int j = i * i; j <N ; j+= i){
+            primes[j] = 1;
+        }
+    }
+
+    primes[i]^=1;
+
+   }
+
+
+
+
+}
+
+*/
+
+
+/// gcd function
+
+int gcd(int a, int b){
+
+    if(a == 0) {
+        return b;
+    }
+    return gcd(b % a, a);
+
+
+
+
+}
+
+
+
+
+
+
+
+
+int main()
+{
+    optimize();
+
+    /**
+          number theroy : Divisors, Multiples , Prime Numbers, GCD
+
+          Modulo Arithmetic : Find the mod 10^9 + 7
+
+
+          Basic Combinatorics : Permutation(nPr), Combinations(nCr)
+
+
+
+    */
+
+
+   /// check whether a number is prime or not ---> O(n)
+
+   /*
+
+   int n;
+   cin >> n;
+
+   int cnt = 0;
+
+   for(int i = 1; i <= n;i++){
+    if(n % i == 0){
+        cnt++;
+    }
+   }
+   cout << cnt << endl;
+
+
+   */
+
+   /// for sqrt( N )
+
+   /*
+
+   int n;
+   cin >> n;
+
+   int cnt = 0;
+
+   for(int i = 1; i * i <= n;i++){
+
+       if(n % i == 0){
+        cnt++;  /// i is a factor
+
+        if( i != n / i)
+            cnt++;   /// (n / i) is also a factor
+
+
+       }
+
+
+
+   }
+
+   cout << cnt << endl;
+
+   */
+
+
+
+   /// finding the divisors  --- > itarates on numbers
+
+///complexityy : O(nlogN)
+
+  /*
+   int n;
+   cin >> n;
+
+   vector<int>div(n+1);
+
+   for(int i = 1; i <= n;i++){
+
+      for(int j = i ; j <= n; j += i){
+        div[j]++;  /// i  is a divisor of j
+      }
+
+   }
+
+   for(int i = 1; i <= n; i++){
+    cout << div[i] << " ";
+
+   }
+cout << endl;
+
+
+
+
+*/
+
+
+
+///    Optimal Using Seive of Erastrothenis
+
+
+///  complexity --->  O(nlog(logn))  -->  very fast --> Almost linear
+
+/*
+
+  int n;
+  cin >> n;
+
+  vector<int>prime(n+1,1);
+  prime[1] = 0;
+
+  for(int i = 2;i <= n;i++){
+
+    if(!prime[i]) continue;
+    for(int j = i * i; j <= n; j += i)
+   {
+       prime[j] = 0;
+   }
+  }
+
+
+
+/// prime[x] stores if x is prime or not
+
+
+
+
+*/
+
+
+///------------ GCD  ------------
+
+
+/// co - prime numbers --- >  GCD(a,b) = 1;
+
+
+
+
+ /**
+
+   gcd(a,b) = gcd(a, b -a);
+
+ => gcd(a,b) = gcd(b % a, a );  (greedy algorithms for finding gcd)
+compleixity : O(log(max(a,b)))
+
+basically we use this using recursion
+
+
+
+
+also their is a library function -->  __gcd
+
+we use this most
+
+
+
+*/
+
+
+
+int a,b;
+cin >> a >> b;
+
+
+cout << gcd(a,b);
+
+
+/// __gcd(a,b)     we also use here 
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}

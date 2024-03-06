@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    /// array k onek somoy pointer bola hoi
+
+     /// a[]  always  passes the memory location of a[0]
+
+    int a[] = {3,4,5,6};
+    cout << a << endl;  ///0x61ff00( address tah return kore)
+
+    cout << *a << endl;   /// 3      /// array er first index return kore
+    cout << *(a + 1); /// 4  /// array er second index return kore
+
+
+
+   /// arraay declare in c++ new using
+
+   int *b = new int [10];
+   for(int i = 0;i < 10; i++){
+    b[i] = i;
+   }
+
+   for(int i = 0;i < 10 ; i++){
+    cout << b[i] << endl;     /// 0 1  2 3 4 5 6 7 8 9
+   }
+
+
+
+/// evabe size resize kora jabe
+
+
+b = new int [20]; /// ekane n diye o n input niye o amra erokom assign and declare kore resize korte pari
+
+
+for(int i = 0;i < 20; i++){
+    b[i] = i;
+}
+
+for(int i = 0;i < 20; i++){
+    cout << b[i] << endl;
+}
+
+
+/// ekabe o array pointer diye output dewa jai --
+
+/// sort(a, a + n ) --> ekan e  a 0 index k point kortece r n nth pointer k point kortece
+
+
+int x[] = {10,20,30,40,50};
+
+/// evabe amra array iterate korte pari but eta vlo practice na onek jaigay problem kore
+for(int *i = x; i != x + 5; i++){
+    cout << *i  << " ";
+}
+cout << endl;
+
+
+
+
+
+
+    return 0;
+}

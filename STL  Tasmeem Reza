@@ -59,6 +59,84 @@ cout << endl;
 
 
 
+/// lambda function --> function k variable er moto treat kora
+
+
+ auto func = [] (int i, int j){
+   return i + j;
+
+ };
+ cout << func(10,20) << endl;  /// 30
+
+
+
+ /// lambda function k recursive function hisebe use korte chaile
+
+   function<int(int)> fib = [&fib] (int i){
+
+    if(i <= 1) return 1;
+    return fib(i - 1) + fib(i - 2);
+
+   };
+
+   for(int i = 0;i < 10; i++){
+    cout << fib(i) << endl;       /// 1 1 2 3 5 8 .... 55
+   }
+
+
+
+
+   /// reverse sort using lambda function
+
+
+   int y[] = {1,2,3,4,5};
+
+   sort(y, y+5, [] (int i, int j){
+
+     return i > j;
+   });
+
+
+   for(int i  = 0; i < 5;  i++){
+    cout << y[i] << endl;   /// 5 4 3 2 1 
+    }
+
+
+
+    /***********   STL  Part ****************\
+
+
+
+
+                    <<**vector**<<
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     return 0;
 }

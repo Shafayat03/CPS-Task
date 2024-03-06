@@ -111,6 +111,78 @@ cout << endl;
                     <<**vector**<<
 
 
+  /// vector  --> resiable array
+
+    vector<int> v;
+
+
+    ///initially v = []
+
+   v.push_back(10); // v = v[10];
+
+   //
+
+   v.push_back(20); ///v = v[10,20];
+
+   v.push_back(30); /// v = v[10,20,30];
+
+
+   cout << v[0] << " " << v[1] << " " << v[1] << endl;  /// 10, 20, 30
+
+
+///   v.rersize() ---->  dile vector  resize hoye jai
+
+
+
+/// vector of pair  push_back
+
+  vector<pair<int,int>> v;
+
+/// push_back  r   emplace_back()  same kaj kore
+
+
+
+
+
+
+/// emplace_back()  --->  constructor ready korte hoi
+
+v.emplace_back(2,3); /// eta fast kaj kore
+
+
+
+/// v.push_back() korle ---> make_pair() use korte hoi
+
+v.push_back(make_pair(2,3));
+
+/// nije theke akta pair construcct kore tai push_back()  slow kaj kore
+
+
+
+/// vector iterator
+
+for(auto i : v){
+    cout << i << endl; /// vector er value gula i e store hoye jai 
+    
+}
+
+/// ampersent use korle --> vector er j kono value k change korte parbo range based for loop e
+
+for(auto &i : v){ /// ampersent reference return kore
+        
+    i += 1;
+   cout << i << endl; 
+}
+
+/// lower_bound() --> sorted vector er value khuje paite help kore
+
+
+/// size_t --> unsigned int c++ joto size ace eta return kore always
+
+
+// unsigned e negative number handle kora jai nah
+
+
 
 
 

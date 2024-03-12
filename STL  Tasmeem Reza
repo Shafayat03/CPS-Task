@@ -185,6 +185,38 @@ for(auto &i : v){ /// ampersent reference return kore
 
 
 
+    vector<int>v;
+                /// evabe o print kora jai 
+    for(int i= 0; i < (int)v.size() - 1; i++){
+        cout << v[i] << endl; /// kicuy print korbe nah bcz sizee zero akan 
+    }
+    
+    /// try korbo always range based for loop use korar --bcz -- eta te size() kono matter kore nah
+    
+    
+    /// zero output dibe bcz ami function e variable tah pass
+    /// korci tokon variable tar akta copy pass hoice tai
+    
+    void foo(int i){
+    
+       i += 1;
+    }
+    
+    int main()
+    {
+        int var = 0;
+        foo(var);
+        foo(var);
+        
+        cout << var << endl; /// 0 
+    
+    }
+
+
+
+
+
+
 
 
 

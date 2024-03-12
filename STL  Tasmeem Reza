@@ -214,6 +214,22 @@ for(auto &i : v){ /// ampersent reference return kore
 
 
 
+ /// Pass by referenence 
+   
+    void foo(int &i){   /// & sign dile variable nije pass hobe (address tah pass kore dei)
+    
+       i += 1;  /// i = 0 + 1;
+    }
+    
+    int main()
+    {
+        int var = 0;
+        foo(var); /// 1
+        foo(var);  /// 1  
+        
+        cout << var << endl; /// 2 
+    
+    }
 
 
 

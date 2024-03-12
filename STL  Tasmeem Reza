@@ -235,6 +235,47 @@ for(auto &i : v){ /// ampersent reference return kore
 
 
 
+     /// Stack --> sobcheye notun jinish tah sobar upor e rakha  ebong sobcheye poraton jinish tah sobar niche rakha
+
+     ///  LIFO ---> last in first out
+     /// FIFO -->  first in first out
+
+
+     stack < int > s;
+
+
+    s.push(10); /// s = [10];
+    s.push(20); /// s = [10,20];
+    s.push(30); ///[10,20,30];
+
+    cout << s.top() << endl; /// sobar upor er element tah print korbe 30 output (LIFO)
+
+    s.pop(); /// s = [10,20];
+    ///s.pop() last element tah delete kore dei
+    cout << s.top() << endl; /// 20 output dekhabe
+
+   /// s.size --> rize return kroe
+   /// s.empty ---> emptu hole true return kor e r empty na hole false return kore
+
+
+  /// vector r stack  pray same  (vector diiye stack er sob kaj kora jjai)
+
+
+/// stacck akta linklist
+
+/// vector stack theke powerful
+
+
+/// stack iterate korar jonno
+
+/// stack iterate korar por loop theke ber hoi jai 
+while(not s.empty())
+{
+
+    cout << s.top() << endl;  /// 30 20 10 
+
+    s.pop();
+}
 
 
 

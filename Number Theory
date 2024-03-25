@@ -18,7 +18,7 @@ int cnt[mx];
 int main()
 {
 
-        int lim = 10;
+        int lim = 10; /// limit highest -- > 10 ^ 7 porjonto ber korte parbo amra
 
         for(int i = 1; i <= 10; i++)
         {

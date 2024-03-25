@@ -11,6 +11,11 @@
 Ans :   Floor of  10/1     |10 / 1|
                            |______|
 or   int division of   (10 / 1)
+
+ 1 to n er modde  koita divisor or koita multiple hoile
+
+ans hobe :    n  / k  
+
 */
 /// In the name of Allah
 #include<bits/stdc++.h>

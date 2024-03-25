@@ -10,7 +10,7 @@
 
 Ans :   Floor of  10/1     |10 / 1|
                            |______|
-
+or   int division of   (10 / 1)
 */
 /// In the name of Allah
 #include<bits/stdc++.h>

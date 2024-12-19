@@ -55,3 +55,68 @@ int main(){
 
 return 0;
 }
+
+
+
+
+
+
+///2. Write a program to sort n numbers using Selection Sort algorithm.
+
+#include<bits/stdc++.h>
+using namespace std;
+using ll = long long;
+//#define mx 1e5 + 123
+
+void selection_sort_algo(int a[], int n){
+
+
+
+   for(int i = 0; i < n -1; i++){
+
+       int mn = i;
+
+       for(int j = i + 1; j < n ;j++){
+            if(a[j] < a[mn]){
+                  mn = j;
+            }
+       }
+
+     if(mn != i){
+         int t = a[mn];
+         a[mn] = a[i];
+         a[i] = t;
+     }
+
+
+   }
+}
+int main(){
+
+      int n;
+      cin >> n;
+
+      int a[100000+123];
+
+      for(int i = 0; i < n; i++){
+        cin >> a[i];
+      }
+
+
+      selection_sort_algo(a, n);
+
+        for(int i = 0; i < n; i++){
+        cout <<  a[i] << ' ';
+      }
+      cout << '\n';
+
+
+
+
+return 0;
+}
+
+
+
+
+
